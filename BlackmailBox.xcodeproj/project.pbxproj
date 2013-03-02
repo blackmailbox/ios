@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87216E2A08700E1D7C3 /* UIKit.framework */; };
+		4EC1C87516E2A08700E1D7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87416E2A08700E1D7C3 /* Foundation.framework */; };
+		4EC1C87716E2A08700E1D7C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87616E2A08700E1D7C3 /* CoreGraphics.framework */; };
+		4EC1C87D16E2A08700E1D7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C87B16E2A08700E1D7C3 /* InfoPlist.strings */; };
+		4EC1C87F16E2A08700E1D7C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C87E16E2A08700E1D7C3 /* main.m */; };
+		4EC1C88316E2A08700E1D7C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */; };
+		4EC1C88516E2A08700E1D7C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88416E2A08700E1D7C3 /* Default.png */; };
+		4EC1C88716E2A08700E1D7C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88616E2A08700E1D7C3 /* Default@2x.png */; };
+		4EC1C88916E2A08700E1D7C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88816E2A08700E1D7C3 /* Default-568h@2x.png */; };
+		4EC1C88C16E2A08700E1D7C3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */; };
+		4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C88E16E2A08700E1D7C3 /* ViewController.m */; };
+		4EC1C89716E2A08700E1D7C3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C89616E2A08700E1D7C3 /* SenTestingKit.framework */; };
+		4EC1C89816E2A08700E1D7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87216E2A08700E1D7C3 /* UIKit.framework */; };
+		4EC1C89916E2A08700E1D7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87416E2A08700E1D7C3 /* Foundation.framework */; };
+		4EC1C8A116E2A08700E1D7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */; };
+		4EC1C8A416E2A08700E1D7C3 /* BlackmailBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EC1C89A16E2A08700E1D7C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EC1C86716E2A08700E1D7C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EC1C86E16E2A08700E1D7C3;
+			remoteInfo = BlackmailBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4EC1C86F16E2A08700E1D7C3 /* BlackmailBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackmailBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC1C87216E2A08700E1D7C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4EC1C87416E2A08700E1D7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EC1C87616E2A08700E1D7C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4EC1C87A16E2A08700E1D7C3 /* BlackmailBox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlackmailBox-Info.plist"; sourceTree = "<group>"; };
+		4EC1C87C16E2A08700E1D7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EC1C87E16E2A08700E1D7C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EC1C88016E2A08700E1D7C3 /* BlackmailBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlackmailBox-Prefix.pch"; sourceTree = "<group>"; };
+		4EC1C88116E2A08700E1D7C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4EC1C88416E2A08700E1D7C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4EC1C88616E2A08700E1D7C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4EC1C88816E2A08700E1D7C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4EC1C88B16E2A08700E1D7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4EC1C88D16E2A08700E1D7C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4EC1C88E16E2A08700E1D7C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4EC1C89516E2A08700E1D7C3 /* BlackmailBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackmailBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC1C89616E2A08700E1D7C3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EC1C89E16E2A08700E1D7C3 /* BlackmailBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlackmailBoxTests-Info.plist"; sourceTree = "<group>"; };
+		4EC1C8A016E2A08700E1D7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EC1C8A216E2A08700E1D7C3 /* BlackmailBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackmailBoxTests.h; sourceTree = "<group>"; };
+		4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackmailBoxTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EC1C86C16E2A08700E1D7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */,
+				4EC1C87516E2A08700E1D7C3 /* Foundation.framework in Frameworks */,
+				4EC1C87716E2A08700E1D7C3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC1C89116E2A08700E1D7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C89716E2A08700E1D7C3 /* SenTestingKit.framework in Frameworks */,
+				4EC1C89816E2A08700E1D7C3 /* UIKit.framework in Frameworks */,
+				4EC1C89916E2A08700E1D7C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EC1C86616E2A08700E1D7C3 = {
+			isa = PBXGroup;
+			children = (
+				4EC1C87816E2A08700E1D7C3 /* BlackmailBox */,
+				4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */,
+				4EC1C87116E2A08700E1D7C3 /* Frameworks */,
+				4EC1C87016E2A08700E1D7C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EC1C87016E2A08700E1D7C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C86F16E2A08700E1D7C3 /* BlackmailBox.app */,
+				4EC1C89516E2A08700E1D7C3 /* BlackmailBoxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EC1C87116E2A08700E1D7C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C87216E2A08700E1D7C3 /* UIKit.framework */,
+				4EC1C87416E2A08700E1D7C3 /* Foundation.framework */,
+				4EC1C87616E2A08700E1D7C3 /* CoreGraphics.framework */,
+				4EC1C89616E2A08700E1D7C3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EC1C87816E2A08700E1D7C3 /* BlackmailBox */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C88116E2A08700E1D7C3 /* AppDelegate.h */,
+				4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */,
+				4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */,
+				4EC1C88D16E2A08700E1D7C3 /* ViewController.h */,
+				4EC1C88E16E2A08700E1D7C3 /* ViewController.m */,
+				4EC1C87916E2A08700E1D7C3 /* Supporting Files */,
+			);
+			path = BlackmailBox;
+			sourceTree = "<group>";
+		};
+		4EC1C87916E2A08700E1D7C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C87A16E2A08700E1D7C3 /* BlackmailBox-Info.plist */,
+				4EC1C87B16E2A08700E1D7C3 /* InfoPlist.strings */,
+				4EC1C87E16E2A08700E1D7C3 /* main.m */,
+				4EC1C88016E2A08700E1D7C3 /* BlackmailBox-Prefix.pch */,
+				4EC1C88416E2A08700E1D7C3 /* Default.png */,
+				4EC1C88616E2A08700E1D7C3 /* Default@2x.png */,
+				4EC1C88816E2A08700E1D7C3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C8A216E2A08700E1D7C3 /* BlackmailBoxTests.h */,
+				4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */,
+				4EC1C89D16E2A08700E1D7C3 /* Supporting Files */,
+			);
+			path = BlackmailBoxTests;
+			sourceTree = "<group>";
+		};
+		4EC1C89D16E2A08700E1D7C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C89E16E2A08700E1D7C3 /* BlackmailBoxTests-Info.plist */,
+				4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EC1C86E16E2A08700E1D7C3 /* BlackmailBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EC1C8A716E2A08700E1D7C3 /* Build configuration list for PBXNativeTarget "BlackmailBox" */;
+			buildPhases = (
+				4EC1C86B16E2A08700E1D7C3 /* Sources */,
+				4EC1C86C16E2A08700E1D7C3 /* Frameworks */,
+				4EC1C86D16E2A08700E1D7C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlackmailBox;
+			productName = BlackmailBox;
+			productReference = 4EC1C86F16E2A08700E1D7C3 /* BlackmailBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EC1C89416E2A08700E1D7C3 /* BlackmailBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EC1C8AA16E2A08700E1D7C3 /* Build configuration list for PBXNativeTarget "BlackmailBoxTests" */;
+			buildPhases = (
+				4EC1C89016E2A08700E1D7C3 /* Sources */,
+				4EC1C89116E2A08700E1D7C3 /* Frameworks */,
+				4EC1C89216E2A08700E1D7C3 /* Resources */,
+				4EC1C89316E2A08700E1D7C3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EC1C89B16E2A08700E1D7C3 /* PBXTargetDependency */,
+			);
+			name = BlackmailBoxTests;
+			productName = BlackmailBoxTests;
+			productReference = 4EC1C89516E2A08700E1D7C3 /* BlackmailBoxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EC1C86716E2A08700E1D7C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = BlackmailBox;
+			};
+			buildConfigurationList = 4EC1C86A16E2A08700E1D7C3 /* Build configuration list for PBXProject "BlackmailBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EC1C86616E2A08700E1D7C3;
+			productRefGroup = 4EC1C87016E2A08700E1D7C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EC1C86E16E2A08700E1D7C3 /* BlackmailBox */,
+				4EC1C89416E2A08700E1D7C3 /* BlackmailBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EC1C86D16E2A08700E1D7C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C87D16E2A08700E1D7C3 /* InfoPlist.strings in Resources */,
+				4EC1C88516E2A08700E1D7C3 /* Default.png in Resources */,
+				4EC1C88716E2A08700E1D7C3 /* Default@2x.png in Resources */,
+				4EC1C88916E2A08700E1D7C3 /* Default-568h@2x.png in Resources */,
+				4EC1C88C16E2A08700E1D7C3 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC1C89216E2A08700E1D7C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C8A116E2A08700E1D7C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EC1C89316E2A08700E1D7C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EC1C86B16E2A08700E1D7C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C87F16E2A08700E1D7C3 /* main.m in Sources */,
+				4EC1C88316E2A08700E1D7C3 /* AppDelegate.m in Sources */,
+				4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC1C89016E2A08700E1D7C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC1C8A416E2A08700E1D7C3 /* BlackmailBoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EC1C89B16E2A08700E1D7C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EC1C86E16E2A08700E1D7C3 /* BlackmailBox */;
+			targetProxy = 4EC1C89A16E2A08700E1D7C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EC1C87B16E2A08700E1D7C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EC1C87C16E2A08700E1D7C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EC1C88B16E2A08700E1D7C3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EC1C8A016E2A08700E1D7C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EC1C8A516E2A08700E1D7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EC1C8A616E2A08700E1D7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EC1C8A816E2A08700E1D7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
+				INFOPLIST_FILE = "BlackmailBox/BlackmailBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4EC1C8A916E2A08700E1D7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
+				INFOPLIST_FILE = "BlackmailBox/BlackmailBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4EC1C8AB16E2A08700E1D7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlackmailBox.app/BlackmailBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
+				INFOPLIST_FILE = "BlackmailBoxTests/BlackmailBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4EC1C8AC16E2A08700E1D7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlackmailBox.app/BlackmailBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
+				INFOPLIST_FILE = "BlackmailBoxTests/BlackmailBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EC1C86A16E2A08700E1D7C3 /* Build configuration list for PBXProject "BlackmailBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC1C8A516E2A08700E1D7C3 /* Debug */,
+				4EC1C8A616E2A08700E1D7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EC1C8A716E2A08700E1D7C3 /* Build configuration list for PBXNativeTarget "BlackmailBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC1C8A816E2A08700E1D7C3 /* Debug */,
+				4EC1C8A916E2A08700E1D7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4EC1C8AA16E2A08700E1D7C3 /* Build configuration list for PBXNativeTarget "BlackmailBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC1C8AB16E2A08700E1D7C3 /* Debug */,
+				4EC1C8AC16E2A08700E1D7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EC1C86716E2A08700E1D7C3 /* Project object */;
+}
