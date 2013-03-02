@@ -1,5 +1,5 @@
 //
-//  PromiseViewController.h
+//  PromiseDateViewController.h
 //  BlackmailBox
 //
 //  Created by Keith Norman on 3/2/13.
@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Promise.h"
 
-@interface PromiseViewController : UIViewController <UITextViewDelegate>
-
-@property (nonatomic, weak) IBOutlet UITextView *textView;
+@interface PromiseDateViewController : UIViewController
 
 @property (nonatomic, strong) Promise *promise;
+
+@property (nonatomic, weak) IBOutlet UITextField *textField;
 
 @end

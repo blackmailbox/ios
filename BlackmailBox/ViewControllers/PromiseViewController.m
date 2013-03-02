@@ -7,6 +7,7 @@
 //
 
 #import "PromiseViewController.h"
+#import "Promise.h"
 
 @interface PromiseViewController ()
 
@@ -54,6 +55,11 @@ NSString *placeholderText = @"";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark segue shit
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 }
 
 #pragma mark UITextViewDelegate

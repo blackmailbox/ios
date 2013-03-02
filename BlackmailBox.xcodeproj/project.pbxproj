@@ -24,6 +24,11 @@
 		4EC1C8A116E2A08700E1D7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */; };
 		4EC1C8A416E2A08700E1D7C3 /* BlackmailBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */; };
 		4EC1C8B016E2A9FF00E1D7C3 /* PromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */; };
+		4EC1C8B316E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8B116E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld */; };
+		4EC1C8B716E2B1BE00E1D7C3 /* Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8B616E2B1BE00E1D7C3 /* Promise.m */; };
+		4EC1C8B916E2B24F00E1D7C3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C8B816E2B24F00E1D7C3 /* CoreData.framework */; };
+		4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */; };
+		4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,14 @@
 		4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackmailBoxTests.m; sourceTree = "<group>"; };
 		4EC1C8AE16E2A9FF00E1D7C3 /* PromiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseViewController.h; path = ViewControllers/PromiseViewController.h; sourceTree = "<group>"; };
 		4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseViewController.m; path = ViewControllers/PromiseViewController.m; sourceTree = "<group>"; };
+		4EC1C8B216E2B15700E1D7C3 /* BlackmailBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackmailBox.xcdatamodel; sourceTree = "<group>"; };
+		4EC1C8B516E2B1BE00E1D7C3 /* Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Promise.h; path = Models/Promise.h; sourceTree = "<group>"; };
+		4EC1C8B616E2B1BE00E1D7C3 /* Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Promise.m; path = Models/Promise.m; sourceTree = "<group>"; };
+		4EC1C8B816E2B24F00E1D7C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4EC1C8BA16E2B5FD00E1D7C3 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Models/Model.h; sourceTree = "<group>"; };
+		4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = Models/Model.m; sourceTree = "<group>"; };
+		4EC1C8BD16E2B95C00E1D7C3 /* PromiseDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseDateViewController.h; path = ViewControllers/PromiseDateViewController.h; sourceTree = "<group>"; };
+		4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseDateViewController.m; path = ViewControllers/PromiseDateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC1C8B916E2B24F00E1D7C3 /* CoreData.framework in Frameworks */,
 				4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */,
 				4EC1C87516E2A08700E1D7C3 /* Foundation.framework in Frameworks */,
 				4EC1C87716E2A08700E1D7C3 /* CoreGraphics.framework in Frameworks */,
@@ -109,6 +123,7 @@
 		4EC1C87116E2A08700E1D7C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EC1C8B816E2B24F00E1D7C3 /* CoreData.framework */,
 				4EC1C87216E2A08700E1D7C3 /* UIKit.framework */,
 				4EC1C87416E2A08700E1D7C3 /* Foundation.framework */,
 				4EC1C87616E2A08700E1D7C3 /* CoreGraphics.framework */,
@@ -120,9 +135,10 @@
 		4EC1C87816E2A08700E1D7C3 /* BlackmailBox */ = {
 			isa = PBXGroup;
 			children = (
-				4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */,
 				4EC1C88116E2A08700E1D7C3 /* AppDelegate.h */,
 				4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */,
+				4EC1C8B416E2B16100E1D7C3 /* Models */,
+				4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */,
 				4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */,
 				4EC1C88D16E2A08700E1D7C3 /* ViewController.h */,
 				4EC1C88E16E2A08700E1D7C3 /* ViewController.m */,
@@ -169,8 +185,22 @@
 			children = (
 				4EC1C8AE16E2A9FF00E1D7C3 /* PromiseViewController.h */,
 				4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */,
+				4EC1C8BD16E2B95C00E1D7C3 /* PromiseDateViewController.h */,
+				4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4EC1C8B416E2B16100E1D7C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C8B116E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld */,
+				4EC1C8B516E2B1BE00E1D7C3 /* Promise.h */,
+				4EC1C8B616E2B1BE00E1D7C3 /* Promise.m */,
+				4EC1C8BA16E2B5FD00E1D7C3 /* Model.h */,
+				4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +317,10 @@
 				4EC1C88316E2A08700E1D7C3 /* AppDelegate.m in Sources */,
 				4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */,
 				4EC1C8B016E2A9FF00E1D7C3 /* PromiseViewController.m in Sources */,
+				4EC1C8B316E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld in Sources */,
+				4EC1C8B716E2B1BE00E1D7C3 /* Promise.m in Sources */,
+				4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */,
+				4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +511,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4EC1C8B116E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4EC1C8B216E2B15700E1D7C3 /* BlackmailBox.xcdatamodel */,
+			);
+			currentVersion = 4EC1C8B216E2B15700E1D7C3 /* BlackmailBox.xcdatamodel */;
+			path = BlackmailBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4EC1C86716E2A08700E1D7C3 /* Project object */;
 }

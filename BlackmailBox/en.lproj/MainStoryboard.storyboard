@@ -40,14 +40,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ3-8B-QgA">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PbB-m4-LFS" kind="push" id="fqe-ZX-hw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UJ3-8B-QgA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4N4-QM-XJC"/>
                             <constraint firstAttribute="trailing" secondItem="MeQ-va-i8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9FF-9e-8oJ"/>
                             <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="AID-TT-n42"/>
                             <constraint firstItem="EFl-zz-cFi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q2M-pS-aPZ"/>
                             <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="56" id="eQD-R2-BMN"/>
                             <constraint firstItem="MeQ-va-i8z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lnt-FL-cXn"/>
+                            <constraint firstAttribute="bottom" secondItem="UJ3-8B-QgA" secondAttribute="bottom" constant="184" id="z9e-jW-Ent"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ojb-ZA-Jlw"/>
@@ -57,12 +72,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="132"/>
+            <point key="canvasLocation" x="260" y="132"/>
+        </scene>
+        <!--Promise Date View Controller-->
+        <scene sceneID="3rK-ih-OBX">
+            <objects>
+                <viewController id="PbB-m4-LFS" customClass="PromiseDateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73A-JX-bw1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peD-CR-1Ek">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="T8w-EE-avX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When you gettin this done by?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zii-u8-U9x">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="peD-CR-1Ek" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FqD-Cw-ApK"/>
+                            <constraint firstItem="peD-CR-1Ek" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="63" id="Jfo-g6-bIV"/>
+                            <constraint firstItem="zii-u8-U9x" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wrD-Xo-HzI"/>
+                            <constraint firstItem="zii-u8-U9x" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="y9y-Jx-Dsq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ya9-1r-lgt"/>
+                    <connections>
+                        <outlet property="textField" destination="peD-CR-1Ek" id="KSo-K3-jWz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKP-aZ-jOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="132"/>
         </scene>
     </scenes>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PromiseDateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="PromiseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
