@@ -23,6 +23,7 @@
 		4EC1C89916E2A08700E1D7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87416E2A08700E1D7C3 /* Foundation.framework */; };
 		4EC1C8A116E2A08700E1D7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */; };
 		4EC1C8A416E2A08700E1D7C3 /* BlackmailBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */; };
+		4EC1C8B016E2A9FF00E1D7C3 /* PromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		4EC1C8A016E2A08700E1D7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EC1C8A216E2A08700E1D7C3 /* BlackmailBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackmailBoxTests.h; sourceTree = "<group>"; };
 		4EC1C8A316E2A08700E1D7C3 /* BlackmailBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackmailBoxTests.m; sourceTree = "<group>"; };
+		4EC1C8AE16E2A9FF00E1D7C3 /* PromiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseViewController.h; path = ViewControllers/PromiseViewController.h; sourceTree = "<group>"; };
+		4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseViewController.m; path = ViewControllers/PromiseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		4EC1C87816E2A08700E1D7C3 /* BlackmailBox */ = {
 			isa = PBXGroup;
 			children = (
+				4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */,
 				4EC1C88116E2A08700E1D7C3 /* AppDelegate.h */,
 				4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */,
 				4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */,
@@ -158,6 +162,15 @@
 				4EC1C89F16E2A08700E1D7C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1C8AE16E2A9FF00E1D7C3 /* PromiseViewController.h */,
+				4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 				4EC1C87F16E2A08700E1D7C3 /* main.m in Sources */,
 				4EC1C88316E2A08700E1D7C3 /* AppDelegate.m in Sources */,
 				4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */,
+				4EC1C8B016E2A9FF00E1D7C3 /* PromiseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
