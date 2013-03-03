@@ -14,6 +14,9 @@
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 
+@property IBOutlet UILabel *PromiseLabel;
+@property IBOutlet UITextView *PromiseTextView;
+
 @property (nonatomic, strong) Promise *promise;
 
 @end

@@ -21,6 +21,8 @@ NSString *placeholderText = @"";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [self.PromiseLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
+  [self.PromiseTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:16]];
   self.textView.delegate = self;
   placeholderText = self.textView.text;
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -31,6 +33,7 @@ NSString *placeholderText = @"";
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+
   [super viewWillAppear:animated];
   self.textView.layer.borderWidth = 1.0f;
   self.textView.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];

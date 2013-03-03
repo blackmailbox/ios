@@ -28,15 +28,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="10C-0m-dKB"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Promise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-zz-cFi">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="YOU'RE ON THE HOOK FOR.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-zz-cFi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="358-tv-uHM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.76682079081632648" green="0.76682079081632648" blue="0.76682079081632648" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="...To Pay You $50" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-va-i8z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-va-i8z">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="3h8-KY-li2"/>
+                                    <constraint firstAttribute="width" constant="280" id="qj6-Zg-MBy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -58,13 +64,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="2vv-dG-f29"/>
+                            <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="46" id="4Wi-cs-JrU"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="5XP-UT-z4x"/>
-                            <constraint firstAttribute="trailing" secondItem="MeQ-va-i8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9FF-9e-8oJ"/>
-                            <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="AID-TT-n42"/>
+                            <constraint firstItem="MeQ-va-i8z" firstAttribute="trailing" secondItem="EFl-zz-cFi" secondAttribute="trailing" type="default" id="ChX-dK-aak"/>
+                            <constraint firstItem="10C-0m-dKB" firstAttribute="centerX" secondItem="EFl-zz-cFi" secondAttribute="centerX" type="default" id="EWv-BZ-1mT"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="HYe-Fp-OjI"/>
-                            <constraint firstItem="EFl-zz-cFi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q2M-pS-aPZ"/>
-                            <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="56" id="eQD-R2-BMN"/>
-                            <constraint firstItem="MeQ-va-i8z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lnt-FL-cXn"/>
+                            <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="90" id="hE9-1J-ETT"/>
+                            <constraint firstItem="EFl-zz-cFi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l69-TK-AX2"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vkR-iF-Nlk"/>
                             <constraint firstAttribute="bottom" secondItem="UJ3-8B-QgA" secondAttribute="bottom" constant="176" id="vnI-bS-Yd9"/>
                             <constraint firstAttribute="trailing" secondItem="UJ3-8B-QgA" secondAttribute="trailing" constant="66" id="wdp-6I-49p"/>
@@ -72,12 +78,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ojb-ZA-Jlw"/>
                     <connections>
-                        <outlet property="textView" destination="MeQ-va-i8z" id="AyF-VK-hc9"/>
+                        <outlet property="PromiseLabel" destination="EFl-zz-cFi" id="t1T-hu-tIv"/>
+                        <outlet property="PromiseTextView" destination="MeQ-va-i8z" id="TL5-sH-ZIa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="132"/>
+            <point key="canvasLocation" x="235" y="132"/>
         </scene>
         <!--Promise Date View Controller-->
         <scene sceneID="3rK-ih-OBX">
@@ -141,6 +148,8 @@
         <class className="PromiseViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="PromiseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="PromiseTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>

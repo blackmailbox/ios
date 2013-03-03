@@ -31,6 +31,9 @@
 		4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */; };
 		4EC1C90916E2C0DF00E1D7C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */; };
 		B91A029916E2FC980090DAF0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B91A029816E2FC980090DAF0 /* bg.png */; };
+		B91A029C16E3089C0090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */; };
+		B91A029E16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */; };
+		B91A029F16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,8 @@
 		4EC1C90716E2C0DF00E1D7C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ViewControllers/BaseViewController.h; sourceTree = "<group>"; };
 		4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ViewControllers/BaseViewController.m; sourceTree = "<group>"; };
 		B91A029816E2FC980090DAF0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Assets/bg.png; sourceTree = "<group>"; };
+		B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FjallaOne-Regular.ttf"; path = "Assets/FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
+		B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 		4EC1C86616E2A08700E1D7C3 = {
 			isa = PBXGroup;
 			children = (
+				B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */,
 				4EC1C87816E2A08700E1D7C3 /* BlackmailBox */,
 				4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */,
 				4EC1C87116E2A08700E1D7C3 /* Frameworks */,
@@ -214,6 +220,7 @@
 		B91A029A16E2FCA20090DAF0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */,
 				B91A029816E2FC980090DAF0 /* bg.png */,
 			);
 			name = Resources;
@@ -296,6 +303,8 @@
 				4EC1C88916E2A08700E1D7C3 /* Default-568h@2x.png in Resources */,
 				4EC1C88C16E2A08700E1D7C3 /* MainStoryboard.storyboard in Resources */,
 				B91A029916E2FC980090DAF0 /* bg.png in Resources */,
+				B91A029C16E3089C0090DAF0 /* FjallaOne-Regular.ttf in Resources */,
+				B91A029E16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC1C8A116E2A08700E1D7C3 /* InfoPlist.strings in Resources */,
+				B91A029F16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
