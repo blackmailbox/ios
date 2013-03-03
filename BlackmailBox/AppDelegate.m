@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "PromiseViewController.h"
+#import "PromisesTableViewController.h"
 
 @implementation AppDelegate
 
@@ -18,7 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
-  PromiseViewController *viewController = navController.viewControllers.lastObject;
+  PromisesTableViewController *viewController = navController.viewControllers.lastObject;
+  NSLog(@"VC IS %@", viewController);
   viewController.managedObjectContext = self.managedObjectContext;
   return YES;
 }
@@ -48,6 +49,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Saves changes in the application's managed object context before the application terminates.
+  [self.session close];
   [self saveContext];
 }
 
@@ -147,5 +149,25 @@
   return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark FBLogin
+
+// FBSample logic
+// The native facebook application transitions back to an authenticating application when the user
+// chooses to either log in, or cancel. The url passed to this method contains the token in the
+// case of a successful login. By passing the url to the handleOpenURL method of a session object
+// the session object can parse the URL, and capture the token for use by the rest of the authenticating
+// application; the return value of handleOpenURL indicates whether or not the URL was handled by the
+// session object, and does not reflect whether or not the login was successful; the session object's
+// state, as well as its arguments passed to the state completion handler indicate whether the login
+// was successful; note that if the session is nil or closed when handleOpenURL is called, the expression
+// will be boolean NO, meaning the URL was not handled by the authenticating application
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  NSLog(@"CALLING THIS");
+  // attempt to extract a token from the url
+  return [self.session handleOpenURL:url];
+}
 
 @end

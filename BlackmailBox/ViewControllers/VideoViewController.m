@@ -22,11 +22,15 @@
 @implementation VideoViewController {
   AVPlayerLayer *avPlayerLayer;
   AVPlayer *avPlayer;
+  NSTimer *timer;
 }
+
+int duration = 30;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  [self.progressView setProgress:0];
   if ([self captureManager] == nil) {
 		AVCamCaptureManager *manager = [[AVCamCaptureManager alloc] init];
 		[self setCaptureManager:manager];
@@ -60,15 +64,7 @@
 				[[[self captureManager] session] startRunning];
 			});
     }
-    self.view.layer.borderColor = [[UIColor blueColor] CGColor];
-    self.view.layer.borderWidth = 4.0;
   }
-  
-  [NSTimer scheduledTimerWithTimeInterval:1
-                                   target:self
-                                 selector:@selector(tick:)
-                                 userInfo:nil
-                                  repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +77,11 @@
 
 -(void)recorderRecordingDidBegin:(AVCamRecorder *)recorder {
   NSLog(@"RECORDING STARTED");
+  timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                   target:self
+                                 selector:@selector(tick:)
+                                 userInfo:nil
+                                  repeats:YES];
 }
 
 -(void)recorder:(AVCamRecorder *)recorder recordingDidFinishToOutputFileURL:(NSURL *)outputFileURL error:(NSError *)error {
@@ -95,10 +96,14 @@
 
 - (IBAction)onPressRecord:(id)sender {
   if(self.captureManager.recorder.isRecording) {
-     [self.captureManager stopRecording];
+    [self.captureManager stopRecording];
+    [timer invalidate];
+    [self.recordBtn setTitle:@"Record" forState:UIControlStateNormal];
   }
-  else
+  else {
     [self.captureManager startRecording];
+    [self.recordBtn setTitle:@"Stop" forState:UIControlStateNormal];
+  }
   NSLog(@"RECORD PRESSED");
 }
 
@@ -112,6 +117,13 @@
 }
 
 -(void)tick:aTimer {
+  duration--;
+  NSLog(@"DUR IS %f", ((30.0 - duration) / 30.0));
+  [self.progressView setProgress:((30.0 - duration) / 30.0) animated:YES];
+  if(duration <= 0) {
+    [aTimer invalidate];
+    [self.captureManager stopRecording];
+  }
 }
 
 @end

@@ -16,4 +16,6 @@
 @property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSDate * endDate;
 
++(NSURL *)url;
+
 @end

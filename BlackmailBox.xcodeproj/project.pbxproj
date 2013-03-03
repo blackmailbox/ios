@@ -17,7 +17,6 @@
 		4EC1C88716E2A08700E1D7C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88616E2A08700E1D7C3 /* Default@2x.png */; };
 		4EC1C88916E2A08700E1D7C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88816E2A08700E1D7C3 /* Default-568h@2x.png */; };
 		4EC1C88C16E2A08700E1D7C3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */; };
-		4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C88E16E2A08700E1D7C3 /* ViewController.m */; };
 		4EC1C89716E2A08700E1D7C3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C89616E2A08700E1D7C3 /* SenTestingKit.framework */; };
 		4EC1C89816E2A08700E1D7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87216E2A08700E1D7C3 /* UIKit.framework */; };
 		4EC1C89916E2A08700E1D7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87416E2A08700E1D7C3 /* Foundation.framework */; };
@@ -35,6 +34,13 @@
 		4ECD07E616E33FCE00A82D6B /* AVCamCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E116E33FCE00A82D6B /* AVCamCaptureManager.m */; };
 		4ECD07E716E33FCE00A82D6B /* AVCamRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E316E33FCE00A82D6B /* AVCamRecorder.m */; };
 		4ECD07E816E33FCE00A82D6B /* AVCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E516E33FCE00A82D6B /* AVCamUtilities.m */; };
+		4ECD07EA16E3C45900A82D6B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07E916E3C45900A82D6B /* Social.framework */; };
+		4ECD07EC16E3C46500A82D6B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07EB16E3C46500A82D6B /* Accounts.framework */; };
+		4ECD07EE16E3C4B800A82D6B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07ED16E3C4B800A82D6B /* FacebookSDK.framework */; };
+		4ECD07F016E3C65F00A82D6B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07EF16E3C65F00A82D6B /* AssetsLibrary.framework */; };
+		4ECD07F616E3DFD200A82D6B /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07F516E3DFD200A82D6B /* ConnectViewController.m */; };
+		4ECD07F816E3E21500A82D6B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07F716E3E21500A82D6B /* AdSupport.framework */; };
+		4ECD07FB16E3F5D900A82D6B /* PromisesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07FA16E3F5D900A82D6B /* PromisesTableViewController.m */; };
 		B91A029916E2FC980090DAF0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B91A029816E2FC980090DAF0 /* bg.png */; };
 		B91A029C16E3089C0090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */; };
 		B91A029E16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */; };
@@ -66,8 +72,6 @@
 		4EC1C88616E2A08700E1D7C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4EC1C88816E2A08700E1D7C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4EC1C88B16E2A08700E1D7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		4EC1C88D16E2A08700E1D7C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4EC1C88E16E2A08700E1D7C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4EC1C89516E2A08700E1D7C3 /* BlackmailBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackmailBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC1C89616E2A08700E1D7C3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EC1C89E16E2A08700E1D7C3 /* BlackmailBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlackmailBoxTests-Info.plist"; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 		4ECD07E316E33FCE00A82D6B /* AVCamRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamRecorder.m; sourceTree = "<group>"; };
 		4ECD07E416E33FCE00A82D6B /* AVCamUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamUtilities.h; sourceTree = "<group>"; };
 		4ECD07E516E33FCE00A82D6B /* AVCamUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamUtilities.m; sourceTree = "<group>"; };
+		4ECD07E916E3C45900A82D6B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4ECD07EB16E3C46500A82D6B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4ECD07ED16E3C4B800A82D6B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
+		4ECD07EF16E3C65F00A82D6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4ECD07F416E3DFD200A82D6B /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ViewControllers/ConnectViewController.h; sourceTree = "<group>"; };
+		4ECD07F516E3DFD200A82D6B /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectViewController.m; path = ViewControllers/ConnectViewController.m; sourceTree = "<group>"; };
+		4ECD07F716E3E21500A82D6B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4ECD07F916E3F5D900A82D6B /* PromisesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromisesTableViewController.h; sourceTree = "<group>"; };
+		4ECD07FA16E3F5D900A82D6B /* PromisesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromisesTableViewController.m; sourceTree = "<group>"; };
 		B91A029816E2FC980090DAF0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Assets/bg.png; sourceTree = "<group>"; };
 		B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FjallaOne-Regular.ttf"; path = "Assets/FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
 		B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -105,6 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECD07F816E3E21500A82D6B /* AdSupport.framework in Frameworks */,
+				4ECD07EA16E3C45900A82D6B /* Social.framework in Frameworks */,
+				4ECD07F016E3C65F00A82D6B /* AssetsLibrary.framework in Frameworks */,
+				4ECD07EE16E3C4B800A82D6B /* FacebookSDK.framework in Frameworks */,
+				4ECD07EC16E3C46500A82D6B /* Accounts.framework in Frameworks */,
 				4ECD07DB16E33FAD00A82D6B /* AVFoundation.framework in Frameworks */,
 				4EC1C8B916E2B24F00E1D7C3 /* CoreData.framework in Frameworks */,
 				4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */,
@@ -129,7 +147,6 @@
 		4EC1C86616E2A08700E1D7C3 = {
 			isa = PBXGroup;
 			children = (
-				4ECD07DA16E33FAD00A82D6B /* AVFoundation.framework */,
 				B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */,
 				4EC1C87816E2A08700E1D7C3 /* BlackmailBox */,
 				4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */,
@@ -150,6 +167,12 @@
 		4EC1C87116E2A08700E1D7C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD07F716E3E21500A82D6B /* AdSupport.framework */,
+				4ECD07EF16E3C65F00A82D6B /* AssetsLibrary.framework */,
+				4ECD07ED16E3C4B800A82D6B /* FacebookSDK.framework */,
+				4ECD07EB16E3C46500A82D6B /* Accounts.framework */,
+				4ECD07E916E3C45900A82D6B /* Social.framework */,
+				4ECD07DA16E33FAD00A82D6B /* AVFoundation.framework */,
 				4EC1C8B816E2B24F00E1D7C3 /* CoreData.framework */,
 				4EC1C87216E2A08700E1D7C3 /* UIKit.framework */,
 				4EC1C87416E2A08700E1D7C3 /* Foundation.framework */,
@@ -168,9 +191,7 @@
 				4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */,
 				4ECD07DF16E33FCE00A82D6B /* Video */,
 				4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */,
-				4EC1C88D16E2A08700E1D7C3 /* ViewController.h */,
 				B91A029A16E2FCA20090DAF0 /* Resources */,
-				4EC1C88E16E2A08700E1D7C3 /* ViewController.m */,
 				4EC1C87916E2A08700E1D7C3 /* Supporting Files */,
 			);
 			path = BlackmailBox;
@@ -220,6 +241,10 @@
 				4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */,
 				4EC1C90716E2C0DF00E1D7C3 /* BaseViewController.h */,
 				4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */,
+				4ECD07F416E3DFD200A82D6B /* ConnectViewController.h */,
+				4ECD07F516E3DFD200A82D6B /* ConnectViewController.m */,
+				4ECD07F916E3F5D900A82D6B /* PromisesTableViewController.h */,
+				4ECD07FA16E3F5D900A82D6B /* PromisesTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -374,7 +399,6 @@
 			files = (
 				4EC1C87F16E2A08700E1D7C3 /* main.m in Sources */,
 				4EC1C88316E2A08700E1D7C3 /* AppDelegate.m in Sources */,
-				4EC1C88F16E2A08700E1D7C3 /* ViewController.m in Sources */,
 				4EC1C8B016E2A9FF00E1D7C3 /* PromiseViewController.m in Sources */,
 				4EC1C8B316E2B15700E1D7C3 /* BlackmailBox.xcdatamodeld in Sources */,
 				4EC1C8B716E2B1BE00E1D7C3 /* Promise.m in Sources */,
@@ -385,6 +409,8 @@
 				4ECD07E616E33FCE00A82D6B /* AVCamCaptureManager.m in Sources */,
 				4ECD07E716E33FCE00A82D6B /* AVCamRecorder.m in Sources */,
 				4ECD07E816E33FCE00A82D6B /* AVCamUtilities.m in Sources */,
+				4ECD07F616E3DFD200A82D6B /* ConnectViewController.m in Sources */,
+				4ECD07FB16E3F5D900A82D6B /* PromisesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,9 +519,17 @@
 		4EC1C8A816E2A08700E1D7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../facebook-ios-sdk/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
 				INFOPLIST_FILE = "BlackmailBox/BlackmailBox-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -504,9 +538,17 @@
 		4EC1C8A916E2A08700E1D7C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../facebook-ios-sdk/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlackmailBox/BlackmailBox-Prefix.pch";
 				INFOPLIST_FILE = "BlackmailBox/BlackmailBox-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

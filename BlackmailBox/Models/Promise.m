@@ -14,4 +14,8 @@
 @dynamic text;
 @dynamic endDate;
 
++(NSURL *)url {
+  return [NSURL URLWithString:@""];
+}
+
 @end

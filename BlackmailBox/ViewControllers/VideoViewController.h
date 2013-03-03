@@ -15,6 +15,8 @@
 @interface VideoViewController : BaseViewController
 
 @property (nonatomic, retain) IBOutlet UIView *video;
+@property (nonatomic, retain) IBOutlet UIButton *recordBtn;
+@property (nonatomic, retain) IBOutlet UIProgressView *progressView;
 
 @property (nonatomic,retain) AVCamCaptureManager *captureManager;
 @property (nonatomic,retain) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;

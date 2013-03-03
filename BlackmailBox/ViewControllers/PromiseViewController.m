@@ -21,10 +21,10 @@ NSString *placeholderText = @"";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self.PromiseLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
-  [self.PromiseTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:16]];
-  self.textView.delegate = self;
-  placeholderText = self.textView.text;
+  [self.promiseLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
+  [self.promiseTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:16]];
+  self.promiseTextView.delegate = self;
+  placeholderText = self.promiseTextView.text;
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(onClickOutsideTextView)];
   
@@ -35,16 +35,16 @@ NSString *placeholderText = @"";
 -(void)viewWillAppear:(BOOL)animated {
 
   [super viewWillAppear:animated];
-  self.textView.layer.borderWidth = 1.0f;
-  self.textView.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];
-  self.textView.layer.cornerRadius = 5.0;
+  self.promiseTextView.layer.borderWidth = 1.0f;
+  self.promiseTextView.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];
+  self.promiseTextView.layer.cornerRadius = 5.0;
 }
 
 -(void)onClickOutsideTextView {
-  [self.textView resignFirstResponder];
-  if([self.textView.text isEqualToString:@""])
-    self.textView.text = placeholderText;
-  NSLog(@"text is %@", self.textView.text);
+  [self.promiseTextView resignFirstResponder];
+  if([self.promiseTextView.text isEqualToString:@""])
+    self.promiseTextView.text = placeholderText;
+  NSLog(@"text is %@", self.promiseTextView.text);
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,8 +56,9 @@ NSString *placeholderText = @"";
 #pragma mark segue shit
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  NSLog(@"text at segue is %@", self.textView.text);
-  self.promise = [[Promise alloc] initWithAttributes:@{@"text": self.textView.text}
+  NSLog(@"text at segue is %@ %@", self.promiseTextView.text, self.managedObjectContext);
+  NSString *text = self.promiseTextView.text ? self.promiseTextView.text : @"";
+  self.promise = [[Promise alloc] initWithAttributes:@{@"text": text}
                                            inContext:self.managedObjectContext];
   NSLog(@"Promise at segue is %@", self.promise);
   PromiseDateViewController *viewController = segue.destinationViewController;
@@ -68,8 +69,8 @@ NSString *placeholderText = @"";
 #pragma mark UITextViewDelegate
 
 -(void)textViewDidBeginEditing:(UITextView *)textView {
-  if([self.textView.text isEqualToString:placeholderText])
-    self.textView.text = @"";
+  if([self.promiseTextView.text isEqualToString:placeholderText])
+    self.promiseTextView.text = @"";
 }
 
 @end

@@ -30,7 +30,7 @@
 
 -(void)textFieldDidEndEditing:(UITextField *)textField {
   NSLog(@"set date");
-  [self.promise setValue:self.datePicker.date forKey:@"endDate"];
+  //[self.promise setValue:self.datePicker.date forKey:@"endDate"];
 }
 
 #pragma mark UIDatePicker actions

@@ -40,8 +40,10 @@
 }
 
 -(Model *)initWithAttributes:(NSDictionary *)attributes inContext:(NSManagedObjectContext *)context {
+  NSLog(@"START INIT");
   NSEntityDescription *entity = [self.class entityDescriptionInContext:context];
   Model *model = [NSEntityDescription insertNewObjectForEntityForName:entity.name inManagedObjectContext:context];
+  NSLog(@"CREATE MODEL");
   NSArray *availableKeys = [[model.entity attributesByName] allKeys];
   NSLog(@"available keys are %@", availableKeys);
   [attributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {

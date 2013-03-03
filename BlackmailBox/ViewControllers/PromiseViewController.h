@@ -12,10 +12,8 @@
 
 @interface PromiseViewController : BaseViewController <UITextViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextView *textView;
-
-@property IBOutlet UILabel *PromiseLabel;
-@property IBOutlet UITextView *PromiseTextView;
+@property (nonatomic, retain) IBOutlet UILabel *promiseLabel;
+@property (nonatomic, retain) IBOutlet UITextView *promiseTextView;
 
 @property (nonatomic, strong) Promise *promise;
 

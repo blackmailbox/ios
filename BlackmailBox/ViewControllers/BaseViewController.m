@@ -15,6 +15,7 @@
 @implementation BaseViewController
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  NSLog(@"UP IN HERE");
   if([self respondsToSelector:@selector(managedObjectContext)] &&
     [segue.destinationViewController respondsToSelector:@selector(setManagedObjectContext:)]) {
     [segue.destinationViewController setManagedObjectContext:self.managedObjectContext];
