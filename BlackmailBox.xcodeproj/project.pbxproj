@@ -30,6 +30,11 @@
 		4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */; };
 		4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */; };
 		4EC1C90916E2C0DF00E1D7C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */; };
+		4ECD07DB16E33FAD00A82D6B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD07DA16E33FAD00A82D6B /* AVFoundation.framework */; };
+		4ECD07DE16E33FC400A82D6B /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07DD16E33FC400A82D6B /* VideoViewController.m */; };
+		4ECD07E616E33FCE00A82D6B /* AVCamCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E116E33FCE00A82D6B /* AVCamCaptureManager.m */; };
+		4ECD07E716E33FCE00A82D6B /* AVCamRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E316E33FCE00A82D6B /* AVCamRecorder.m */; };
+		4ECD07E816E33FCE00A82D6B /* AVCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD07E516E33FCE00A82D6B /* AVCamUtilities.m */; };
 		B91A029916E2FC980090DAF0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B91A029816E2FC980090DAF0 /* bg.png */; };
 		B91A029C16E3089C0090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */; };
 		B91A029E16E30A020090DAF0 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */; };
@@ -81,6 +86,15 @@
 		4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseDateViewController.m; path = ViewControllers/PromiseDateViewController.m; sourceTree = "<group>"; };
 		4EC1C90716E2C0DF00E1D7C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ViewControllers/BaseViewController.h; sourceTree = "<group>"; };
 		4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ViewControllers/BaseViewController.m; sourceTree = "<group>"; };
+		4ECD07DA16E33FAD00A82D6B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4ECD07DC16E33FC400A82D6B /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoViewController.h; path = ViewControllers/VideoViewController.h; sourceTree = "<group>"; };
+		4ECD07DD16E33FC400A82D6B /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoViewController.m; path = ViewControllers/VideoViewController.m; sourceTree = "<group>"; };
+		4ECD07E016E33FCE00A82D6B /* AVCamCaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamCaptureManager.h; sourceTree = "<group>"; };
+		4ECD07E116E33FCE00A82D6B /* AVCamCaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamCaptureManager.m; sourceTree = "<group>"; };
+		4ECD07E216E33FCE00A82D6B /* AVCamRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamRecorder.h; sourceTree = "<group>"; };
+		4ECD07E316E33FCE00A82D6B /* AVCamRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamRecorder.m; sourceTree = "<group>"; };
+		4ECD07E416E33FCE00A82D6B /* AVCamUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamUtilities.h; sourceTree = "<group>"; };
+		4ECD07E516E33FCE00A82D6B /* AVCamUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamUtilities.m; sourceTree = "<group>"; };
 		B91A029816E2FC980090DAF0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Assets/bg.png; sourceTree = "<group>"; };
 		B91A029B16E3089C0090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FjallaOne-Regular.ttf"; path = "Assets/FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
 		B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -91,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECD07DB16E33FAD00A82D6B /* AVFoundation.framework in Frameworks */,
 				4EC1C8B916E2B24F00E1D7C3 /* CoreData.framework in Frameworks */,
 				4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */,
 				4EC1C87516E2A08700E1D7C3 /* Foundation.framework in Frameworks */,
@@ -114,6 +129,7 @@
 		4EC1C86616E2A08700E1D7C3 = {
 			isa = PBXGroup;
 			children = (
+				4ECD07DA16E33FAD00A82D6B /* AVFoundation.framework */,
 				B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */,
 				4EC1C87816E2A08700E1D7C3 /* BlackmailBox */,
 				4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */,
@@ -150,6 +166,7 @@
 				4EC1C88216E2A08700E1D7C3 /* AppDelegate.m */,
 				4EC1C8B416E2B16100E1D7C3 /* Models */,
 				4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */,
+				4ECD07DF16E33FCE00A82D6B /* Video */,
 				4EC1C88A16E2A08700E1D7C3 /* MainStoryboard.storyboard */,
 				4EC1C88D16E2A08700E1D7C3 /* ViewController.h */,
 				B91A029A16E2FCA20090DAF0 /* Resources */,
@@ -195,6 +212,8 @@
 		4EC1C8AD16E2A9D900E1D7C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD07DC16E33FC400A82D6B /* VideoViewController.h */,
+				4ECD07DD16E33FC400A82D6B /* VideoViewController.m */,
 				4EC1C8AE16E2A9FF00E1D7C3 /* PromiseViewController.h */,
 				4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */,
 				4EC1C8BD16E2B95C00E1D7C3 /* PromiseDateViewController.h */,
@@ -215,6 +234,19 @@
 				4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		4ECD07DF16E33FCE00A82D6B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD07E016E33FCE00A82D6B /* AVCamCaptureManager.h */,
+				4ECD07E116E33FCE00A82D6B /* AVCamCaptureManager.m */,
+				4ECD07E216E33FCE00A82D6B /* AVCamRecorder.h */,
+				4ECD07E316E33FCE00A82D6B /* AVCamRecorder.m */,
+				4ECD07E416E33FCE00A82D6B /* AVCamUtilities.h */,
+				4ECD07E516E33FCE00A82D6B /* AVCamUtilities.m */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		B91A029A16E2FCA20090DAF0 /* Resources */ = {
@@ -349,6 +381,10 @@
 				4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */,
 				4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */,
 				4EC1C90916E2C0DF00E1D7C3 /* BaseViewController.m in Sources */,
+				4ECD07DE16E33FC400A82D6B /* VideoViewController.m in Sources */,
+				4ECD07E616E33FCE00A82D6B /* AVCamCaptureManager.m in Sources */,
+				4ECD07E716E33FCE00A82D6B /* AVCamRecorder.m in Sources */,
+				4ECD07E816E33FCE00A82D6B /* AVCamUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

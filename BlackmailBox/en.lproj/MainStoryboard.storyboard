@@ -143,7 +143,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="PromiseViewController" superclassName="BaseViewController">
