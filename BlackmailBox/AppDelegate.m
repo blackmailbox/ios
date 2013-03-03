@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PromiseViewController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+  UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
+  PromiseViewController *viewController = navController.viewControllers.lastObject;
+  viewController.managedObjectContext = self.managedObjectContext;
+  return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

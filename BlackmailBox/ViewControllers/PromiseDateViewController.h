@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "Promise.h"
 
-@interface PromiseDateViewController : UIViewController
+@interface PromiseDateViewController : BaseViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) Promise *promise;
+@property (nonatomic, strong) UIDatePicker *datePicker;
 
 @property (nonatomic, weak) IBOutlet UITextField *textField;
 

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BlackmailBox/ViewControllers/PromiseViewController.m"
-         timestampString = "383955552.150256"
+         timestampString = "383961543.503537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-didReceiveMemoryWarning"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BlackmailBox/ViewControllers/PromiseViewController.m"
-         timestampString = "383955552.150256"
+         timestampString = "383960548.063523"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-onClickOutsideTextView"
          landmarkType = "5">
       </FileBreakpoint>

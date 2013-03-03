@@ -29,6 +29,7 @@
 		4EC1C8B916E2B24F00E1D7C3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C8B816E2B24F00E1D7C3 /* CoreData.framework */; };
 		4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */; };
 		4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */; };
+		4EC1C90916E2C0DF00E1D7C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		4EC1C8BB16E2B5FD00E1D7C3 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = Models/Model.m; sourceTree = "<group>"; };
 		4EC1C8BD16E2B95C00E1D7C3 /* PromiseDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseDateViewController.h; path = ViewControllers/PromiseDateViewController.h; sourceTree = "<group>"; };
 		4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseDateViewController.m; path = ViewControllers/PromiseDateViewController.m; sourceTree = "<group>"; };
+		4EC1C90716E2C0DF00E1D7C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ViewControllers/BaseViewController.h; sourceTree = "<group>"; };
+		4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ViewControllers/BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				4EC1C8AF16E2A9FF00E1D7C3 /* PromiseViewController.m */,
 				4EC1C8BD16E2B95C00E1D7C3 /* PromiseDateViewController.h */,
 				4EC1C8BE16E2B95C00E1D7C3 /* PromiseDateViewController.m */,
+				4EC1C90716E2C0DF00E1D7C3 /* BaseViewController.h */,
+				4EC1C90816E2C0DF00E1D7C3 /* BaseViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				4EC1C8B716E2B1BE00E1D7C3 /* Promise.m in Sources */,
 				4EC1C8BC16E2B5FD00E1D7C3 /* Model.m in Sources */,
 				4EC1C8BF16E2B95C00E1D7C3 /* PromiseDateViewController.m in Sources */,
+				4EC1C90916E2C0DF00E1D7C3 /* BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

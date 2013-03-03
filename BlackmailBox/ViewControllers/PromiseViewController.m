@@ -8,6 +8,7 @@
 
 #import "PromiseViewController.h"
 #import "Promise.h"
+#import "PromiseDateViewController.h"
 
 @interface PromiseViewController ()
 
@@ -16,15 +17,6 @@
 @implementation PromiseViewController
 
 NSString *placeholderText = @"";
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -49,6 +41,7 @@ NSString *placeholderText = @"";
   [self.textView resignFirstResponder];
   if([self.textView.text isEqualToString:@""])
     self.textView.text = placeholderText;
+  NSLog(@"text is %@", self.textView.text);
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +53,13 @@ NSString *placeholderText = @"";
 #pragma mark segue shit
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  NSLog(@"text at segue is %@", self.textView.text);
+  self.promise = [[Promise alloc] initWithAttributes:@{@"text": self.textView.text}
+                                           inContext:self.managedObjectContext];
+  NSLog(@"Promise at segue is %@", self.promise);
+  PromiseDateViewController *viewController = segue.destinationViewController;
+  viewController.promise = self.promise;
+  [super prepareForSegue:segue sender:sender];
 }
 
 #pragma mark UITextViewDelegate

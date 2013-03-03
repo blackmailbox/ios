@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="132"/>
+            <point key="canvasLocation" x="240" y="132"/>
         </scene>
         <!--Promise Date View Controller-->
         <scene sceneID="3rK-ih-OBX">
@@ -114,16 +114,19 @@
         </scene>
     </scenes>
     <classes>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="PromiseDateViewController" superclassName="UIViewController">
+        <class className="PromiseDateViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="PromiseViewController" superclassName="UIViewController">
+        <class className="PromiseViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>

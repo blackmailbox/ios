@@ -43,8 +43,10 @@
   NSEntityDescription *entity = [self.class entityDescriptionInContext:context];
   Model *model = [NSEntityDescription insertNewObjectForEntityForName:entity.name inManagedObjectContext:context];
   NSArray *availableKeys = [[model.entity attributesByName] allKeys];
+  NSLog(@"available keys are %@", availableKeys);
   [attributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-    if([availableKeys containsObject:obj]) {
+    if([availableKeys containsObject:key]) {
+      NSLog(@"setting val for %@ to key %@", obj, key);
       [model setValue:obj forKey:key];
     }
   }];

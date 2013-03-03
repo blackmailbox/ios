@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "Promise.h"
 
-@interface PromiseViewController : UIViewController <UITextViewDelegate>
+@interface PromiseViewController : BaseViewController <UITextViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 
