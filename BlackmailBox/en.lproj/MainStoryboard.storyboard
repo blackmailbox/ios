@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6l4-65-Rod">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6l4-65-Rod">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -27,6 +27,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="10C-0m-dKB"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Promise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-zz-cFi">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,15 +55,19 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="UJ3-8B-QgA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4N4-QM-XJC"/>
+                            <constraint firstItem="10C-0m-dKB" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="2vv-dG-f29"/>
+                            <constraint firstItem="10C-0m-dKB" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="5XP-UT-z4x"/>
                             <constraint firstAttribute="trailing" secondItem="MeQ-va-i8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9FF-9e-8oJ"/>
                             <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="AID-TT-n42"/>
+                            <constraint firstItem="10C-0m-dKB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="HYe-Fp-OjI"/>
                             <constraint firstItem="EFl-zz-cFi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q2M-pS-aPZ"/>
                             <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="56" id="eQD-R2-BMN"/>
                             <constraint firstItem="MeQ-va-i8z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lnt-FL-cXn"/>
-                            <constraint firstAttribute="bottom" secondItem="UJ3-8B-QgA" secondAttribute="bottom" constant="184" id="z9e-jW-Ent"/>
+                            <constraint firstItem="10C-0m-dKB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vkR-iF-Nlk"/>
+                            <constraint firstAttribute="bottom" secondItem="UJ3-8B-QgA" secondAttribute="bottom" constant="176" id="vnI-bS-Yd9"/>
+                            <constraint firstAttribute="trailing" secondItem="UJ3-8B-QgA" secondAttribute="trailing" constant="66" id="wdp-6I-49p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ojb-ZA-Jlw"/>
@@ -82,6 +87,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-mM-YfU"/>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peD-CR-1Ek">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="T8w-EE-avX"/>
@@ -95,10 +101,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="peD-CR-1Ek" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FqD-Cw-ApK"/>
                             <constraint firstItem="peD-CR-1Ek" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="63" id="Jfo-g6-bIV"/>
+                            <constraint firstItem="Wzt-mM-YfU" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" type="default" id="ddW-q7-fcE"/>
+                            <constraint firstItem="Wzt-mM-YfU" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" type="default" id="dq8-7L-585"/>
+                            <constraint firstItem="Wzt-mM-YfU" firstAttribute="trailing" secondItem="73A-JX-bw1" secondAttribute="trailing" type="default" id="g8n-6n-73r"/>
+                            <constraint firstItem="Wzt-mM-YfU" firstAttribute="bottom" secondItem="73A-JX-bw1" secondAttribute="bottom" type="default" id="jpA-cN-Lhc"/>
                             <constraint firstItem="zii-u8-U9x" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wrD-Xo-HzI"/>
                             <constraint firstItem="zii-u8-U9x" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="y9y-Jx-Dsq"/>
                         </constraints>
@@ -113,6 +122,9 @@
             <point key="canvasLocation" x="647" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.png" width="640" height="1136"/>
+    </resources>
     <classes>
         <class className="BaseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
