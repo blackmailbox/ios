@@ -17,13 +17,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.datePicker = [[UIDatePicker alloc] init];
-  [self.datePicker addTarget:self action:@selector(onDateChanged:) forControlEvents:UIControlEventValueChanged];
-  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                        action:@selector(onClickOutsideTextView)];
-  [self.view addGestureRecognizer:tap];
-  self.textField.inputView = self.datePicker;
-  self.textField.delegate = self;
 	// Do any additional setup after loading the view.
 }
 
@@ -43,18 +36,15 @@
 #pragma mark UIDatePicker actions
 
 -(void)onDateChanged:(UIDatePicker *)sender {
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  dateFormatter.dateFormat = @"MM/dd/YYYY hh:mm";
-  NSString *date = [dateFormatter stringFromDate:self.datePicker.date];
+  NSString *date = [self formattedDate:self.datePicker.date];
   NSLog(@"DATE CHANGED %@", date);
-  self.textField.text = date;
 }
 
-#pragma mark TapGesture callback
-
--(void)onClickOutsideTextView {
-  NSLog(@"stuff %@", self.promise);
-  [self.textField resignFirstResponder];
+-(NSString *)formattedDate:(NSDate *)date {
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  dateFormatter.dateFormat = @"MM/dd/YYYY hh:mm";
+  NSString *dateString = [dateFormatter stringFromDate:date];
+  return dateString;
 }
 
 
