@@ -62,8 +62,8 @@
        NSError *error) {
        if (!error) {
          NSLog(@"user %@", user);
-         appDelegate.user = user;
-         [self persistUserDataToServer];
+         appDelegate.user = [user mutableCopy];
+         //[self persistUserDataToServer];
          [self performSegueWithIdentifier:@"successSegue" sender:self];
        }
      }];
@@ -81,6 +81,7 @@
   
   NSDictionary *user = appDelegate.user;
   NSError *error = nil;
+  NSLog(@"ACCESS TOKEN IS %@", FBSession.activeSession.accessTokenData.accessToken);
   [user setValue:FBSession.activeSession.accessTokenData.accessToken forKey:@"accessToken"];
   NSDictionary *userParams = @{@"user": @{@"accessToken": [user valueForKey:@"accessToken"], @"name": [user valueForKey:@"name"], @"id": [user valueForKey:@"id"], @"username": [user valueForKey:@"username"]}};
   NSData *jsonData = [NSJSONSerialization dataWithJSONObject:userParams options:NSJSONWritingPrettyPrinted error:&error];

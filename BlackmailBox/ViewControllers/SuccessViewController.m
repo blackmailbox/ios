@@ -40,9 +40,15 @@
 }
 
 -(void)uploadItAll {
-  NSDictionary *promiseParams = @{@"promise": @{@"description": [self.promise valueForKey:@"text"], @"expiresAt": [NSNumber numberWithFloat:[[self.promise valueForKey:@"endDate"] timeIntervalSince1970]]}};
-  NSLog(@"on SUBMIT %@", promiseParams);
+  NSMutableDictionary *promiseParams = [NSMutableDictionary dictionary];
+  if([self.promise valueForKey:@"text"])
+    [promiseParams setValue:[self.promise valueForKey:@"text"] forKey:@"description"];
+  if([self.promise valueForKey:@"endDate"])
+    [promiseParams setValue:[NSNumber numberWithFloat:[[self.promise valueForKey:@"endDate"] timeIntervalSince1970]] forKey:@"expiresAt"];
+  
+  
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSLog(@"USEr IS %@", appDelegate.user);
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
   [request setURL:
    [NSURL URLWithString:

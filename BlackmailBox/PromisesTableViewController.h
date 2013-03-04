@@ -13,6 +13,7 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UILabel *startLabel;
+@property (nonatomic, retain) IBOutlet UIButton *startBtn;
 
 @property (nonatomic, strong) NSMutableArray *promises;
 
