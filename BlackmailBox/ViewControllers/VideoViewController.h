@@ -12,11 +12,13 @@
 
 @class AVCamCaptureManager, AVCamPreviewView, AVCaptureVideoPreviewLayer;
 
-@interface VideoViewController : BaseViewController
+@interface VideoViewController : BaseViewController <NSURLConnectionDataDelegate>
 
 @property (nonatomic, retain) IBOutlet UIView *video;
 @property (nonatomic, retain) IBOutlet UIButton *recordBtn;
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;
+@property (nonatomic, retain) IBOutlet UIButton *submitBtn;
+@property (nonatomic, retain) IBOutlet UIButton *nextBtn;
 
 @property (nonatomic,retain) AVCamCaptureManager *captureManager;
 @property (nonatomic,retain) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;

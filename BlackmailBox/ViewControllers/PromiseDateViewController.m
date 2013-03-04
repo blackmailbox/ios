@@ -17,6 +17,12 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
+  
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                        action:@selector(onClickOutsideTextView)];
+  
+  [self.view addGestureRecognizer:tap];
   [self.promiseExpLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   [self.promiseExpTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:120]];
   self.numberOfDaysField.layer.borderWidth = 1.0f;
@@ -32,7 +38,17 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  
+  NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+  [formatter setNumberStyle:NSNumberFormatterNoStyle];
+  NSNumber *days = [formatter numberFromString:self.numberOfDaysField.text];
+  NSDate *date = [NSDate dateWithTimeIntervalSinceNow:(days.intValue * 24 * 60 * 60)];
+  [self.promise setValue:date forKey:@"endDate"];
+  NSLog(@"promise is %@", self.promise);
+  [super prepareForSegue:segue sender:sender];
+}
+
+-(void)onClickOutsideTextView {
+  [self.numberOfDaysField resignFirstResponder];
 }
 
 #pragma mark UITextFieldDelegate

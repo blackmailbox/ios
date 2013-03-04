@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 BlackmailBox. All rights reserved.
 //
 
+#import "NSDictionary+NSDictionary_params.h"
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 

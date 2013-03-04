@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface PromisesTableViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PromisesTableViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 

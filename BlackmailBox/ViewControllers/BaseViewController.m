@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "AppDelegate.h"
 
 @interface BaseViewController ()
 
@@ -27,7 +28,8 @@
   }
 }
 
--(void)doFBLogin:(void (^)())completionHandler {
+-(void)doFBLogin:(void (^)())completionHandler {  
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   // get the app delegate so that we can access the session property
   // this button's job is to flip-flop the session from open to closed
   if (FBSession.activeSession.isOpen) {
@@ -37,7 +39,16 @@
     // users will simply close the app or switch away, without logging out; this will
     // cause the implicit cached-token login to occur on next launch of the application
     //[FBSession.activeSession closeAndClearTokenInformation];
-    completionHandler();
+    [[FBRequest requestForMe] startWithCompletionHandler:
+     ^(FBRequestConnection *connection,
+       NSDictionary<FBGraphUser> *user,
+       NSError *error) {
+       if (!error) {
+         NSLog(@"user %@", user);
+         appDelegate.user = user;
+         completionHandler();
+       }
+     }];
   } else {
     NSLog(@"IN THIS ELSE");
     if (FBSession.activeSession.state != FBSessionStateCreated) {
@@ -51,8 +62,20 @@
                                                          NSError *error) {
       // and here we make sure to update our UX according to the new session state
       NSLog(@"DID STUFF %@", session.accessTokenData.accessToken);
-      completionHandler();
+      
+      [[FBRequest requestForMe] startWithCompletionHandler:
+       ^(FBRequestConnection *connection,
+         NSDictionary<FBGraphUser> *user,
+         NSError *error) {
+         NSLog(@"GOT ERROR? %@", error);
+         if (!error) {
+           NSLog(@"user %@", user);
+           appDelegate.user = user;
+           completionHandler();
+         }
+       }];
     }];
   }
 }
+
 @end
