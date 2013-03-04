@@ -102,7 +102,10 @@ NSString *placeholderText = @"";
   NSLog(@"Selected friends: %@", friendPickerController.selection);
   // Dismiss the friend picker
   if(friendPickerController.selection.count > 0) {
-    self.addFriendsButton.selected = YES;
+    [self.addFriendsButton setImage:[UIImage imageNamed:@"add-friends-active.png"] forState:UIControlStateNormal];
+  }
+  else {
+    [self.addFriendsButton setImage:[UIImage imageNamed:@"add-friends.png"] forState:UIControlStateNormal];
   }
   [[sender presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
