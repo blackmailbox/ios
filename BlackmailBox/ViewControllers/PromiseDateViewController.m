@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(onClickOutsideTextView)];

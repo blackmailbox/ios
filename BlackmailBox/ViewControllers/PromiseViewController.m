@@ -23,6 +23,7 @@ NSString *placeholderText = @"";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   [self.promiseLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   [self.promiseTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:16]];
   self.promiseTextView.delegate = self;
@@ -69,12 +70,15 @@ NSString *placeholderText = @"";
     [friendPickerController loadData];
     // Show the picker modally
     [friendPickerController presentModallyFromViewController:self animated:YES handler:nil];
+    friendPickerController.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    friendPickerController.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
   }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   NSString *text = self.promiseTextView.text ? self.promiseTextView.text : @"";
-  NSDictionary *attributes = @{@"text": text};
+  NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+  [attributes setValue:text forKey:@"text"];
   if(taggedUsers.count > 0) {
     [attributes setValue:taggedUsers forKey:@"taggedUsers"];
   }

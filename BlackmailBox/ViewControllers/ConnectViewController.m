@@ -20,9 +20,12 @@
 - (void)viewDidLoad
 {
   NSLog(@"OK DUDE MAN");
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   responseData = [[NSMutableData alloc] init];
   //[FBSession.activeSession closeAndClearTokenInformation];
   [super viewDidLoad];
+  
+  [self.connectLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   // create a fresh session object
   [FBSession setActiveSession:[[FBSession alloc] init]];
   
@@ -60,10 +63,7 @@
        if (!error) {
          NSLog(@"user %@", user);
          appDelegate.user = user;
-         UILabel *userName = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
-         userName.text = [@"Logged in as: " stringByAppendingString:[user valueForKey:@"name"]];
-         [self persistUserDataToServer];
-         [self.view addSubview:userName];
+         [self performSegueWithIdentifier:@"successSegue" sender:self];
        }
      }];
   }
@@ -123,6 +123,8 @@
     }];
   }
 }
+
+#pragma mark NSURLConnectionDataDelegate
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
   NSLog(@"GOT DONE HERE");

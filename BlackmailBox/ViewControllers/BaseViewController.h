@@ -10,7 +10,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "Promise.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController <NSURLConnectionDataDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) Promise *promise;
