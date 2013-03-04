@@ -77,7 +77,7 @@ int duration = 30;
 
 -(void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  self.nextBtn.layer.opacity = 1;
+  self.nextBtn.layer.opacity = 0;
 }
 
 - (void)didReceiveMemoryWarning

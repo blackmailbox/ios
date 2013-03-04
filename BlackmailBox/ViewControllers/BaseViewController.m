@@ -62,7 +62,7 @@
                                                          NSError *error) {
       // and here we make sure to update our UX according to the new session state
       NSLog(@"DID STUFF %@", session.accessTokenData.accessToken);
-      
+      NSLog(@"ERROR UP HERE? %@", error);
       [[FBRequest requestForMe] startWithCompletionHandler:
        ^(FBRequestConnection *connection,
          NSDictionary<FBGraphUser> *user,

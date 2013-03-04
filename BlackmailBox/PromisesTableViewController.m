@@ -21,19 +21,37 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [self hideStartScreen];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   [self.startLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   responseData = [[NSMutableData alloc] init];
-  self.promises = [NSMutableArray array];
-  self.tableView.separatorColor = [UIColor blackColor];
-  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
 	// Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  responseData = [[NSMutableData alloc] init];
   [self loadData];
+  responseData = [[NSMutableData alloc] init];
+  self.promises = [NSMutableArray array];
+}
+
+-(void)hideStartScreen {
+  self.startBtn.hidden = YES;
+  self.startLabel.hidden = YES;
+}
+
+-(void)showStartScreen {
+  self.startBtn.hidden = NO;
+  self.startLabel.hidden = NO;
+}
+
+-(void)initTable {
+  self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+  self.tableView.separatorColor = [UIColor blackColor];
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
+  self.tableView.dataSource = self;
+  self.tableView.delegate = self;
+  [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -189,8 +207,15 @@
                         error:&error];
   if(!error) {
     self.promises = [[json valueForKey:@"promises"] mutableCopy];
-    NSLog(@"FINISHED UP %@ %@", self.promises, error);
-    [self.tableView reloadData];
+    if(self.promises.count > 0) {
+      NSLog(@"GOT DATA AAND SUCH");
+      [self hideStartScreen];
+      [self initTable];
+      NSLog(@"FINISHED UP %@ %@", self.promises, error);
+      [self.tableView reloadData];
+    }
+    else
+      [self showStartScreen];
   }
   else
     [self loadData];
