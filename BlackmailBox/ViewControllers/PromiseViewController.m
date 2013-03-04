@@ -29,6 +29,7 @@ NSString *placeholderText = @"";
                                                                         action:@selector(onClickOutsideTextView)];
   
   [self.view addGestureRecognizer:tap];
+  [self.addFriendsButton addTarget:self action:@selector(showFriendsPicker) forControlEvents:UIControlEventTouchUpInside];
 	// Do any additional setup after loading the view.
 }
 
@@ -53,6 +54,22 @@ NSString *placeholderText = @"";
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showFriendsPicker {
+  [self doFBLogin:^ {
+    NSLog(@"DONE LOGGED IN NOW");
+    // Initialize the friend picker
+    FBFriendPickerViewController *friendPickerController =
+    [[FBFriendPickerViewController alloc] init];
+    // Set the friend picker title
+    friendPickerController.title = @"Pick Friends";
+    friendPickerController.delegate = self;
+    // Load the friend data
+    [friendPickerController loadData];
+    // Show the picker modally
+    [friendPickerController presentModallyFromViewController:self animated:YES handler:nil];
+  }];
+}
+
 #pragma mark segue shit
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -71,6 +88,23 @@ NSString *placeholderText = @"";
 -(void)textViewDidBeginEditing:(UITextView *)textView {
   if([self.promiseTextView.text isEqualToString:placeholderText])
     self.promiseTextView.text = @"";
+}
+
+#pragma mark FBFriendPickerDelegat
+
+-(void)friendPickerViewControllerSelectionDidChange:(FBFriendPickerViewController *)friendPicker {
+  NSLog(@"Current friend selections: %@", friendPicker.selection);
+}
+
+-(void)facebookViewControllerDoneWasPressed:(id)sender {
+  FBFriendPickerViewController *friendPickerController =
+  (FBFriendPickerViewController*)sender;
+  NSLog(@"Selected friends: %@", friendPickerController.selection);
+  // Dismiss the friend picker
+  if(friendPickerController.selection.count > 0) {
+    self.addFriendsButton.selected = YES;
+  }
+  [[sender presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

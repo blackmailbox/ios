@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+-(void)doFBLogin:(void (^)())completionHandler;
 
 @end

@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import "BaseViewController.h"
 #import "Promise.h"
 
-@interface PromiseViewController : BaseViewController <UITextViewDelegate>
+@interface PromiseViewController : BaseViewController <UITextViewDelegate, FBFriendPickerDelegate>
 
 @property (nonatomic, retain) IBOutlet UILabel *promiseLabel;
 @property (nonatomic, retain) IBOutlet UITextView *promiseTextView;
+@property (nonatomic, retain) IBOutlet UIButton *addFriendsButton;
 
 @property (nonatomic, strong) Promise *promise;
 
