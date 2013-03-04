@@ -20,6 +20,11 @@
     [segue.destinationViewController respondsToSelector:@selector(setManagedObjectContext:)]) {
     [segue.destinationViewController setManagedObjectContext:self.managedObjectContext];
   }
+  
+  if([self respondsToSelector:@selector(promise)] &&
+     [segue.destinationViewController respondsToSelector:@selector(setPromise:)]) {
+    [segue.destinationViewController setPromise:self.promise];
+  }
 }
 
 -(void)doFBLogin:(void (^)())completionHandler {

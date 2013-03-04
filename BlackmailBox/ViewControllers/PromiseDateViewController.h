@@ -12,7 +12,7 @@
 
 @interface PromiseDateViewController : BaseViewController <UITextFieldDelegate>
 
-@property (nonatomic, weak) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic, weak) IBOutlet UITextView *numberOfDaysField;
 
 @property (nonatomic, strong) Promise *promise;
 

@@ -118,7 +118,6 @@
                     <connections>
                         <outlet property="PromiseLabel" destination="EFl-zz-cFi" id="t1T-hu-tIv"/>
                         <outlet property="PromiseTextView" destination="MeQ-va-i8z" id="TL5-sH-ZIa"/>
-                        <outlet property="addFriendsButton" destination="OO2-Bp-Ddh" id="NN5-gx-i2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -134,13 +133,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-mM-YfU"/>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peD-CR-1Ek">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="T8w-EE-avX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When you gettin this done by?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zii-u8-U9x">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -159,20 +151,32 @@
                                     <segue destination="7M5-HW-Br0" kind="push" id="D9M-ba-pvl"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-4N-Sk2">
+                                <color key="backgroundColor" red="0.76862752437591553" green="0.76862752437591553" blue="0.76862752437591553" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="AAU-bY-ShF"/>
+                                    <constraint firstAttribute="width" constant="275" id="jpn-xQ-zLv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="peD-CR-1Ek" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FqD-Cw-ApK"/>
-                            <constraint firstItem="peD-CR-1Ek" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="63" id="Jfo-g6-bIV"/>
+                            <constraint firstItem="NbR-4N-Sk2" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="89" id="Q00-F7-ni7"/>
                             <constraint firstAttribute="bottom" secondItem="Qgh-ss-qXT" secondAttribute="bottom" constant="185" id="Sua-JQ-3qJ"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" type="default" id="ddW-q7-fcE"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" type="default" id="dq8-7L-585"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="bottom" secondItem="73A-JX-bw1" secondAttribute="bottom" type="default" id="jpA-cN-Lhc"/>
+                            <constraint firstAttribute="trailing" secondItem="NbR-4N-Sk2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kMR-bp-j0q"/>
                             <constraint firstAttribute="trailing" secondItem="Qgh-ss-qXT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ohl-mh-V4f"/>
+                            <constraint firstItem="NbR-4N-Sk2" firstAttribute="leading" secondItem="zii-u8-U9x" secondAttribute="leading" type="default" id="wO2-Jo-Qxq"/>
                             <constraint firstItem="zii-u8-U9x" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wrD-Xo-HzI"/>
-                            <constraint firstItem="zii-u8-U9x" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="y9y-Jx-Dsq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ya9-1r-lgt"/>
+                    <connections>
+                        <outlet property="numberOfDaysField" destination="NbR-4N-Sk2" id="5er-US-FPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKP-aZ-jOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,7 +297,7 @@
         <class className="PromiseDateViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="numberOfDaysField" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="PromiseViewController" superclassName="BaseViewController">

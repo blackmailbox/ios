@@ -14,7 +14,9 @@
 
 @end
 
-@implementation PromiseViewController
+@implementation PromiseViewController {
+  NSArray *taggedUsers;
+}
 
 NSString *placeholderText = @"";
 
@@ -75,8 +77,11 @@ NSString *placeholderText = @"";
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   NSLog(@"text at segue is %@ %@", self.promiseTextView.text, self.managedObjectContext);
   NSString *text = self.promiseTextView.text ? self.promiseTextView.text : @"";
-  self.promise = [[Promise alloc] initWithAttributes:@{@"text": text}
-                                           inContext:self.managedObjectContext];
+  NSDictionary *attributes = @{@"text": text};
+  if(taggedUsers.count > 0) {
+    [attributes setValue:taggedUsers forKey:@"taggedUsers"];
+  }
+  self.promise = [[Promise alloc] initWithAttributes:attributes inContext:self.managedObjectContext];
   NSLog(@"Promise at segue is %@", self.promise);
   PromiseDateViewController *viewController = segue.destinationViewController;
   viewController.promise = self.promise;
@@ -107,6 +112,7 @@ NSString *placeholderText = @"";
   else {
     [self.addFriendsButton setImage:[UIImage imageNamed:@"add-friends.png"] forState:UIControlStateNormal];
   }
+  taggedUsers = friendPickerController.selection;
   [[sender presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 

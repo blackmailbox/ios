@@ -17,6 +17,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.numberOfDaysField.layer.borderWidth = 1.0f;
+  self.numberOfDaysField.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];
+  self.numberOfDaysField.layer.cornerRadius = 5.0;
 	// Do any additional setup after loading the view.
 }
 
@@ -24,6 +27,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
 }
 
 #pragma mark UITextFieldDelegate
@@ -36,8 +43,8 @@
 #pragma mark UIDatePicker actions
 
 -(void)onDateChanged:(UIDatePicker *)sender {
-  NSString *date = [self formattedDate:self.datePicker.date];
-  NSLog(@"DATE CHANGED %@", date);
+  //NSString *date = [self formattedDate:self.datePicker.date];
+  //NSLog(@"DATE CHANGED %@", date);
 }
 
 -(NSString *)formattedDate:(NSDate *)date {
