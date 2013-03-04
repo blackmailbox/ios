@@ -322,8 +322,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-4N-Sk2">
                                 <color key="backgroundColor" red="0.76862752437591553" green="0.76862752437591553" blue="0.76862752437591553" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="01K-4b-GAe"/>
                                     <constraint firstAttribute="height" constant="140" id="dQc-Is-F85"/>
-                                    <constraint firstAttribute="width" constant="187" id="jMt-N4-XMN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
@@ -339,22 +339,32 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKJ-9U-CJW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="5"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="aVp-jo-2oc" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="GVY-36-oIS"/>
                             <constraint firstAttribute="trailing" secondItem="Qgh-ss-qXT" secondAttribute="trailing" constant="9" id="H8R-MK-bmo"/>
                             <constraint firstItem="aVp-jo-2oc" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="47" id="J9x-bY-pIz"/>
                             <constraint firstItem="NbR-4N-Sk2" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="89" id="Q00-F7-ni7"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" type="default" id="ddW-q7-fcE"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" type="default" id="dq8-7L-585"/>
+                            <constraint firstAttribute="trailing" secondItem="mKJ-9U-CJW" secondAttribute="trailing" constant="35" id="etf-NQ-tzw"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="bottom" secondItem="73A-JX-bw1" secondAttribute="bottom" type="default" id="jpA-cN-Lhc"/>
+                            <constraint firstItem="aVp-jo-2oc" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="mIE-Ms-vbZ"/>
                             <constraint firstItem="Qgh-ss-qXT" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="236" id="pbp-lo-cQt"/>
+                            <constraint firstItem="mKJ-9U-CJW" firstAttribute="bottom" secondItem="NbR-4N-Sk2" secondAttribute="bottom" type="default" id="sCE-JB-fzm"/>
                             <constraint firstItem="aVp-jo-2oc" firstAttribute="leading" secondItem="NbR-4N-Sk2" secondAttribute="leading" type="default" id="sTl-Mw-dFj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ya9-1r-lgt"/>
                     <connections>
                         <outlet property="numberOfDaysField" destination="NbR-4N-Sk2" id="5er-US-FPh"/>
+                        <outlet property="promiseDaysLabel" destination="mKJ-9U-CJW" id="LDp-Y6-qpJ"/>
                         <outlet property="promiseExpLabel" destination="aVp-jo-2oc" id="KqD-W8-upL"/>
                         <outlet property="promiseExpTextView" destination="NbR-4N-Sk2" id="u4r-6q-JwZ"/>
                     </connections>
@@ -567,72 +577,6 @@
         <image name="btn-start.png" width="123" height="82"/>
         <image name="video-chrome.png" width="320" height="10"/>
     </resources>
-    <classes>
-        <class className="BaseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-        </class>
-        <class className="ConnectViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConnectViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onPressConnect:"/>
-                <relationship kind="outlet" name="connectLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PromiseDateViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="numberOfDaysField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="promiseExpLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="promiseExpTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PromiseViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addFriendsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="promiseLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="promiseTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PromisesTableViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromisesTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="startBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ShowPromiseViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShowPromiseViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="peopleInvolved" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="theTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLeft" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SuccessViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SuccessViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="successLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VideoViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onPressRecord:"/>
-                <relationship kind="outlet" name="nextBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="recordBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="video" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

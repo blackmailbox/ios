@@ -94,6 +94,8 @@
 		B96B43E116E5268C00EFB96D /* btn-start-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B96B43DD16E5268C00EFB96D /* btn-start-down@2x.png */; };
 		B96B43E216E5268C00EFB96D /* btn-start.png in Resources */ = {isa = PBXBuildFile; fileRef = B96B43DE16E5268C00EFB96D /* btn-start.png */; };
 		B96B43E316E5268C00EFB96D /* btn-start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B96B43DF16E5268C00EFB96D /* btn-start@2x.png */; };
+		B96B43E516E54BE600EFB96D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B96B43E416E54BE500EFB96D /* icon.png */; };
+		B96B43E716E54CBF00EFB96D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B96B43E616E54CBF00EFB96D /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +194,8 @@
 		B96B43DD16E5268C00EFB96D /* btn-start-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-start-down@2x.png"; path = "Assets/btn-start-down@2x.png"; sourceTree = "<group>"; };
 		B96B43DE16E5268C00EFB96D /* btn-start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-start.png"; path = "Assets/btn-start.png"; sourceTree = "<group>"; };
 		B96B43DF16E5268C00EFB96D /* btn-start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-start@2x.png"; path = "Assets/btn-start@2x.png"; sourceTree = "<group>"; };
+		B96B43E416E54BE500EFB96D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B96B43E616E54CBF00EFB96D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,8 @@
 		4EC1C86616E2A08700E1D7C3 = {
 			isa = PBXGroup;
 			children = (
+				B96B43E616E54CBF00EFB96D /* icon@2x.png */,
+				B96B43E416E54BE500EFB96D /* icon.png */,
 				B91A029D16E30A020090DAF0 /* FjallaOne-Regular.ttf */,
 				4EC1C87816E2A08700E1D7C3 /* BlackmailBox */,
 				4EC1C89C16E2A08700E1D7C3 /* BlackmailBoxTests */,
@@ -509,6 +515,8 @@
 				B96B43E116E5268C00EFB96D /* btn-start-down@2x.png in Resources */,
 				B96B43E216E5268C00EFB96D /* btn-start.png in Resources */,
 				B96B43E316E5268C00EFB96D /* btn-start@2x.png in Resources */,
+				B96B43E516E54BE600EFB96D /* icon.png in Resources */,
+				B96B43E716E54CBF00EFB96D /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
