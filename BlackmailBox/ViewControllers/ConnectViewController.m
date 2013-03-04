@@ -69,15 +69,23 @@
 }
 
 -(void)persistUserDataToServer {
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-  [request setURL:[NSURL URLWithString:@"http://blackmailboxapp.com/api/users"]];
+  [request setURL:[NSURL URLWithString:@"http://localhost:3000/api/users"]];
   [request setHTTPMethod:@"POST"];
   NSMutableData *body = [NSMutableData data];
-  [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", @"----------@--------"] dataUsingEncoding:NSUTF8StringEncoding]];
-  [body appendData:[[NSString stringWithFormat:@"accessToken=%@&", FBSession.activeSession.accessTokenData.accessToken]
-                    dataUsingEncoding:NSUTF8StringEncoding]];
+
   [request setHTTPBody:body];
+  
+  NSDictionary *user = appDelegate.user;
+  NSError *error = nil;
+  [user setValue:FBSession.activeSession.accessTokenData.accessToken forKey:@"accessToken"];
+  NSDictionary *userParams = @{@"user": @{@"accessToken": [user valueForKey:@"accessToken"], @"name": [user valueForKey:@"name"], @"id": [user valueForKey:@"id"], @"username": [user valueForKey:@"username"]}};
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:userParams options:NSJSONWritingPrettyPrinted error:&error];
+  NSLog(@"THE JSON DATA %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+  [body appendData:jsonData];
   [request addValue:[NSString stringWithFormat:@"%d", body.length] forHTTPHeaderField:@"Content-Length"];
+  [request addValue:@"application/json" forHTTPHeaderField:@"Content-type"];
   // now lets make the connection to the web
   NSLog(@"MAKING REQUEST");
   [NSURLConnection connectionWithRequest:request delegate:self];
@@ -120,6 +128,7 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+  NSLog(@"GOT SOME DATA");
   [responseData appendData:data];
 }
 
@@ -135,7 +144,7 @@
                         error:&error];
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   [appDelegate.user setValue:[[json valueForKey:@"user"] valueForKey:@"id"] forKey:@"_id"];
-  NSLog(@"DID FINISH LOADING %@", appDelegate.user);
+  NSLog(@"DID FINISH LOADING %@ %@", [responseData description], error);
 }
 
 

@@ -21,6 +21,7 @@
   PromisesTableViewController *viewController = navController.viewControllers.lastObject;
   NSLog(@"VC IS %@", viewController);
   viewController.managedObjectContext = self.managedObjectContext;
+  viewController.promise = [[Promise alloc] initWithAttributes:@{} inContext:self.managedObjectContext];
   return YES;
 }
 							

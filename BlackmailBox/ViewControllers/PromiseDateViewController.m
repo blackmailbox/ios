@@ -17,6 +17,11 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                        action:@selector(onClickOutsideTextView)];
+  
+  [self.view addGestureRecognizer:tap];
   self.numberOfDaysField.layer.borderWidth = 1.0f;
   self.numberOfDaysField.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];
   self.numberOfDaysField.layer.cornerRadius = 5.0;
@@ -30,7 +35,17 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  
+  NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+  [formatter setNumberStyle:NSNumberFormatterNoStyle];
+  NSNumber *days = [formatter numberFromString:self.numberOfDaysField.text];
+  NSDate *date = [NSDate dateWithTimeIntervalSinceNow:(days.intValue * 24 * 60 * 60)];
+  [self.promise setValue:date forKey:@"endDate"];
+  NSLog(@"promise is %@", self.promise);
+  [super prepareForSegue:segue sender:sender];
+}
+
+-(void)onClickOutsideTextView {
+  [self.numberOfDaysField resignFirstResponder];
 }
 
 #pragma mark UITextFieldDelegate

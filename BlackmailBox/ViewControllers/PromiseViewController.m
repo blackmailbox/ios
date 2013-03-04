@@ -72,19 +72,15 @@ NSString *placeholderText = @"";
   }];
 }
 
-#pragma mark segue shit
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  NSLog(@"text at segue is %@ %@", self.promiseTextView.text, self.managedObjectContext);
   NSString *text = self.promiseTextView.text ? self.promiseTextView.text : @"";
   NSDictionary *attributes = @{@"text": text};
   if(taggedUsers.count > 0) {
     [attributes setValue:taggedUsers forKey:@"taggedUsers"];
   }
-  self.promise = [[Promise alloc] initWithAttributes:attributes inContext:self.managedObjectContext];
-  NSLog(@"Promise at segue is %@", self.promise);
-  PromiseDateViewController *viewController = segue.destinationViewController;
-  viewController.promise = self.promise;
+  [attributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    [self.promise setValue:obj forKey:key];
+  }];
   [super prepareForSegue:segue sender:sender];
 }
 

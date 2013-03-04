@@ -73,6 +73,11 @@ int duration = 30;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  NSLog(@"promise now is %@", self.promise);
+  [super prepareForSegue:segue sender:sender];
+}
+
 #pragma mark AVCamRecorderDelegate
 
 -(void)recorderRecordingDidBegin:(AVCamRecorder *)recorder {
@@ -92,6 +97,9 @@ int duration = 30;
   [self.view.layer insertSublayer:avPlayerLayer atIndex:10];
   [avPlayer play];
   [avPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+  NSData *videoData = [NSData dataWithContentsOfFile:[outputFileURL path]];
+  NSLog(@"THE DATA OF VID IS %@ from path %@ with original path %@", videoData, [outputFileURL path], outputFileURL);
+  [self.promise setValue:videoData forKey:@"video"];
 }
 
 - (IBAction)onPressRecord:(id)sender {
