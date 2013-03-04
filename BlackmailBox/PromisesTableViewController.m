@@ -22,6 +22,7 @@
 {
   [super viewDidLoad];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
+  [self.startLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   responseData = [[NSMutableData alloc] init];
   self.promises = [NSMutableArray array];
   self.tableView.separatorColor = [UIColor blackColor];

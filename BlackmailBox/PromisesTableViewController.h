@@ -12,6 +12,7 @@
 @interface PromisesTableViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UILabel *startLabel;
 
 @property (nonatomic, strong) NSMutableArray *promises;
 
