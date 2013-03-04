@@ -199,7 +199,10 @@
                                     <action selector="onPressRecord:" destination="7M5-HW-Br0" eventType="touchUpInside" id="XcO-Wx-Nxw"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VJI-f8-pcp"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VJI-f8-pcp">
+                                <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="trackTintColor" red="0.14411272319999999" green="0.14411272319999999" blue="0.14411272319999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctR-Co-6Of">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
@@ -216,13 +219,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VJI-f8-pcp" firstAttribute="leading" secondItem="lh2-F0-MgN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9xN-cc-5UV"/>
-                            <constraint firstAttribute="trailing" secondItem="VJI-f8-pcp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V86-Oh-BPl"/>
+                            <constraint firstItem="EAy-0p-nwQ" firstAttribute="leading" secondItem="lh2-F0-MgN" secondAttribute="leading" constant="29" id="FUM-S5-i8l"/>
+                            <constraint firstItem="ctR-Co-6Of" firstAttribute="top" secondItem="EAy-0p-nwQ" secondAttribute="top" type="default" id="KUS-MZ-cPi"/>
+                            <constraint firstAttribute="bottom" secondItem="ctR-Co-6Of" secondAttribute="bottom" constant="30" id="Koh-a3-ot7"/>
+                            <constraint firstItem="ctR-Co-6Of" firstAttribute="baseline" secondItem="EAy-0p-nwQ" secondAttribute="baseline" type="default" id="Pmi-FH-LFu"/>
                             <constraint firstAttribute="trailing" secondItem="ctR-Co-6Of" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XBH-Tr-YMi"/>
-                            <constraint firstItem="EAy-0p-nwQ" firstAttribute="leading" secondItem="lh2-F0-MgN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="f7Y-cK-eAP"/>
-                            <constraint firstItem="EAy-0p-nwQ" firstAttribute="top" secondItem="lh2-F0-MgN" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gD6-qP-fT1"/>
-                            <constraint firstAttribute="bottom" secondItem="VJI-f8-pcp" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="p8v-E9-llE"/>
-                            <constraint firstItem="ctR-Co-6Of" firstAttribute="top" secondItem="lh2-F0-MgN" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yo4-dm-aGi"/>
+                            <constraint firstItem="VJI-f8-pcp" firstAttribute="top" secondItem="lh2-F0-MgN" secondAttribute="top" constant="71" id="iAD-Ab-rCw"/>
+                            <constraint firstItem="VJI-f8-pcp" firstAttribute="leading" secondItem="lh2-F0-MgN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qL4-nA-ela"/>
+                            <constraint firstAttribute="trailing" secondItem="VJI-f8-pcp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="v3W-MH-qvQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sN4-RH-f2g"/>
@@ -300,6 +304,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="addFriendsButton" candidateClass="UIButton"/>
+
                 <relationship kind="outlet" name="promiseLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="promiseTextView" candidateClass="UITextView"/>
             </relationships>
