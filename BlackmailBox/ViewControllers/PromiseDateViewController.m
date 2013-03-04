@@ -22,6 +22,8 @@
                                                                         action:@selector(onClickOutsideTextView)];
   
   [self.view addGestureRecognizer:tap];
+  [self.promiseExpLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
+  [self.promiseExpTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:120]];
   self.numberOfDaysField.layer.borderWidth = 1.0f;
   self.numberOfDaysField.layer.borderColor = [[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] CGColor];
   self.numberOfDaysField.layer.cornerRadius = 5.0;

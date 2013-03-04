@@ -38,6 +38,7 @@
       NSLog(@"CREATE SESSION");
     }];
   }
+  [self.connectLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
