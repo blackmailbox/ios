@@ -11,6 +11,9 @@
 
 @interface ConnectViewController : BaseViewController <NSURLConnectionDataDelegate>
 
+@property (nonatomic, retain) IBOutlet UILabel *connectLabel;
+
+
 - (IBAction)onPressConnect:(id)sender;
 
 @end
