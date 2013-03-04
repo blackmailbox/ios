@@ -195,10 +195,6 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ3-8B-QgA">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="qbn-19-n7J"/>
-                                    <constraint firstAttribute="width" constant="110" id="uJF-pp-af6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="btn-next.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -266,10 +262,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-mM-YfU"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-ss-qXT">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="4v5-rm-8aS"/>
-                                    <constraint firstAttribute="width" constant="110" id="Bj4-Ly-sAa"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="btn-next.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,10 +333,6 @@
                                 <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctR-Co-6Of">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="5gk-W6-pJO"/>
-                                    <constraint firstAttribute="width" constant="110" id="KeP-vc-r6L"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="btn-next.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -516,66 +504,12 @@
         <image name="btn-connect-down.png" width="177" height="55"/>
         <image name="btn-connect.png" width="202" height="82"/>
         <image name="btn-next-down.png" width="87" height="55"/>
-        <image name="btn-next.png" width="111" height="80"/>
+        <image name="btn-next.png" width="110" height="82"/>
         <image name="btn-promiseKept-down@2x.png" width="458" height="106"/>
         <image name="btn-promiseKept.png" width="253" height="82"/>
         <image name="btn-record.png" width="76" height="77"/>
         <image name="video-chrome.png" width="320" height="10"/>
     </resources>
-    <classes>
-        <class className="BaseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-        </class>
-        <class className="ConnectViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConnectViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onPressConnect:"/>
-                <relationship kind="outlet" name="connectLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PromiseDateViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="numberOfDaysField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="promiseExpLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="promiseExpTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PromiseViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addFriendsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="promiseLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="promiseTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PromisesTableViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PromisesTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SuccessViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SuccessViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="successLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VideoViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onPressRecord:"/>
-                <relationship kind="outlet" name="nextBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="recordBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="video" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
