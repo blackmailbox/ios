@@ -49,35 +49,19 @@
             </objects>
             <point key="canvasLocation" x="-156" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Promise View Controller-->
         <scene sceneID="QJQ-BZ-QYk">
             <objects>
-                <viewController id="bIj-9O-UST" sceneMemberID="viewController">
+                <viewController id="bIj-9O-UST" customClass="ShowPromiseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBO-xy-AXY">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-G5-55k"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PROMISE TITLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhy-mh-qzM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-G5-55k">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="BPt-La-rTy"/>
+                                    <constraint firstAttribute="height" constant="504" id="PqE-g5-mgf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="5"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="33 days left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thh-eN-9ij">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="ngo-PF-ft5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PEOPLE INVOLVED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K5-9t-hIt">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="9QV-cd-xaw"/>
@@ -130,37 +114,51 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="THE TITLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRC-EL-2L9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="33 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-Lp-8nx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <constraints>
                             <constraint firstItem="Tfk-at-Czn" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0J1-bB-qd1"/>
-                            <constraint firstItem="qwz-G5-55k" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" type="default" id="1DS-5P-FPD"/>
+                            <constraint firstItem="qwz-G5-55k" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="-1" id="2l8-bh-z5j"/>
+                            <constraint firstItem="MRC-EL-2L9" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4yJ-Ti-Ndv"/>
                             <constraint firstItem="jSB-lH-p9u" firstAttribute="leading" secondItem="7PL-Tm-9ZG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7at-ht-2kJ"/>
-                            <constraint firstItem="qwz-G5-55k" firstAttribute="trailing" secondItem="yBO-xy-AXY" secondAttribute="trailing" type="default" id="DQa-Uc-kAg"/>
-                            <constraint firstItem="qwz-G5-55k" firstAttribute="bottom" secondItem="yBO-xy-AXY" secondAttribute="bottom" type="default" id="Emx-Wm-ZNq"/>
-                            <constraint firstItem="hhy-mh-qzM" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="4" id="Khs-M6-NeP"/>
-                            <constraint firstAttribute="trailing" secondItem="thh-eN-9ij" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LA0-Ju-wQk"/>
-                            <constraint firstItem="thh-eN-9ij" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PAq-8x-K5u"/>
+                            <constraint firstItem="qwz-G5-55k" firstAttribute="trailing" secondItem="yBO-xy-AXY" secondAttribute="trailing" type="default" id="9Ba-u0-Fsd"/>
                             <constraint firstItem="Tfk-at-Czn" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="175" id="Qnl-O7-Tcr"/>
-                            <constraint firstItem="qwz-G5-55k" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" type="default" id="W4b-xp-9cX"/>
+                            <constraint firstItem="Bt1-Lp-8nx" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SrC-ha-uWb"/>
+                            <constraint firstItem="Bt1-Lp-8nx" firstAttribute="top" secondItem="MRC-EL-2L9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TFr-I2-vNV"/>
                             <constraint firstItem="gaf-Wx-UgC" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="127" id="W5i-g4-Yjh"/>
                             <constraint firstAttribute="trailing" secondItem="4K5-9t-hIt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="X2J-HG-ye4"/>
-                            <constraint firstAttribute="trailing" secondItem="hhy-mh-qzM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="blN-iG-tbi"/>
                             <constraint firstItem="yNt-LG-0Sx" firstAttribute="centerX" secondItem="4K5-9t-hIt" secondAttribute="centerX" type="default" id="i6n-f3-Bmd"/>
                             <constraint firstItem="jSB-lH-p9u" firstAttribute="trailing" secondItem="gaf-Wx-UgC" secondAttribute="trailing" type="default" id="jdY-Vt-ofb"/>
                             <constraint firstItem="yNt-LG-0Sx" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="244" id="jnn-3D-UEl"/>
                             <constraint firstItem="7PL-Tm-9ZG" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kLv-7c-9wj"/>
                             <constraint firstItem="jSB-lH-p9u" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="169" id="kar-EX-68O"/>
                             <constraint firstItem="gaf-Wx-UgC" firstAttribute="leading" secondItem="7PL-Tm-9ZG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="niJ-07-G1u"/>
-                            <constraint firstItem="thh-eN-9ij" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="26" id="ps0-KK-erI"/>
+                            <constraint firstItem="MRC-EL-2L9" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="12" id="oao-Gh-Tjq"/>
+                            <constraint firstItem="qwz-G5-55k" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" type="default" id="qdl-jp-3bh"/>
                             <constraint firstItem="4K5-9t-hIt" firstAttribute="top" secondItem="yBO-xy-AXY" secondAttribute="top" constant="82" id="uGH-Tq-Ztc"/>
                             <constraint firstItem="7PL-Tm-9ZG" firstAttribute="top" secondItem="4K5-9t-hIt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uO4-Pd-bpU"/>
-                            <constraint firstItem="hhy-mh-qzM" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xpk-Pn-6eM"/>
                             <constraint firstItem="4K5-9t-hIt" firstAttribute="leading" secondItem="yBO-xy-AXY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zhD-XZ-PiU"/>
                             <constraint firstItem="jSB-lH-p9u" firstAttribute="leading" secondItem="Tfk-at-Czn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zxq-wE-Ge4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dbp-mT-BRI"/>
+                    <connections>
+                        <outlet property="completeBtn" destination="yNt-LG-0Sx" id="pku-XM-FXy"/>
+                        <outlet property="peopleInvolved" destination="4K5-9t-hIt" id="EBC-2V-Ftp"/>
+                        <outlet property="theTitle" destination="MRC-EL-2L9" id="7tj-lr-k5p"/>
+                        <outlet property="timeLeft" destination="Bt1-Lp-8nx" id="fK1-10-fbt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g61-Bf-mf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -548,6 +546,15 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromisesTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ShowPromiseViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShowPromiseViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="completeBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="peopleInvolved" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="theTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLeft" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="SuccessViewController" superclassName="BaseViewController">

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E8C3E9816E4793D0019B3BB /* NSDictionary+NSDictionary_params.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C3E9716E4793D0019B3BB /* NSDictionary+NSDictionary_params.m */; };
 		4E8C3E9C16E4C4A10019B3BB /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C3E9B16E4C4A10019B3BB /* SuccessViewController.m */; };
+		4E8C3E9F16E524D50019B3BB /* ShowPromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C3E9E16E524D50019B3BB /* ShowPromiseViewController.m */; };
 		4EC1C87316E2A08700E1D7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87216E2A08700E1D7C3 /* UIKit.framework */; };
 		4EC1C87516E2A08700E1D7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87416E2A08700E1D7C3 /* Foundation.framework */; };
 		4EC1C87716E2A08700E1D7C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1C87616E2A08700E1D7C3 /* CoreGraphics.framework */; };
@@ -106,6 +107,8 @@
 		4E8C3E9716E4793D0019B3BB /* NSDictionary+NSDictionary_params.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDictionary_params.m"; sourceTree = "<group>"; };
 		4E8C3E9A16E4C4A10019B3BB /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = ViewControllers/SuccessViewController.h; sourceTree = "<group>"; };
 		4E8C3E9B16E4C4A10019B3BB /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = ViewControllers/SuccessViewController.m; sourceTree = "<group>"; };
+		4E8C3E9D16E524D50019B3BB /* ShowPromiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowPromiseViewController.h; path = ViewControllers/ShowPromiseViewController.h; sourceTree = "<group>"; };
+		4E8C3E9E16E524D50019B3BB /* ShowPromiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowPromiseViewController.m; path = ViewControllers/ShowPromiseViewController.m; sourceTree = "<group>"; };
 		4EC1C86F16E2A08700E1D7C3 /* BlackmailBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackmailBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC1C87216E2A08700E1D7C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EC1C87416E2A08700E1D7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -327,6 +330,8 @@
 				4ECD07FA16E3F5D900A82D6B /* PromisesTableViewController.m */,
 				4E8C3E9A16E4C4A10019B3BB /* SuccessViewController.h */,
 				4E8C3E9B16E4C4A10019B3BB /* SuccessViewController.m */,
+				4E8C3E9D16E524D50019B3BB /* ShowPromiseViewController.h */,
+				4E8C3E9E16E524D50019B3BB /* ShowPromiseViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				4ECD07FB16E3F5D900A82D6B /* PromisesTableViewController.m in Sources */,
 				4E8C3E9816E4793D0019B3BB /* NSDictionary+NSDictionary_params.m in Sources */,
 				4E8C3E9C16E4C4A10019B3BB /* SuccessViewController.m in Sources */,
+				4E8C3E9F16E524D50019B3BB /* ShowPromiseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

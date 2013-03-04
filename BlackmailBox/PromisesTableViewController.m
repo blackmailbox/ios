@@ -8,6 +8,7 @@
 
 #import "PromisesTableViewController.h"
 #import "AppDelegate.h"
+#import "ShowPromiseViewController.h"
 
 @interface PromisesTableViewController ()
 
@@ -132,6 +133,9 @@
     NSString *suffix = interval > 1.5 ? @" minutes left" : @" minute left";
     dateString = [numberString stringByAppendingString:suffix];
   }
+  promise = [promise mutableCopy];
+  [promise setValue:dateString forKey:@"dateString"];
+  [self.promises replaceObjectAtIndex:indexPath.row withObject:promise];
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   cell.detailTextLabel.text = dateString;
   UIView *selectionColor = [[UIView alloc] init];
@@ -153,9 +157,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSLog(@"DID SELECT");
-  NSDictionary *promise = [self.promises objectAtIndex:indexPath.row];
   [self performSegueWithIdentifier:@"showPromise" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if([segue.identifier isEqualToString:@"showPromise"]) {
+    ShowPromiseViewController *viewController = [segue destinationViewController];
+    NSDictionary *promiseAttributes = [self.promises objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    viewController.promiseAttributes = promiseAttributes;
+    [super prepareForSegue:segue sender:sender];
+  }
 }
 
 #pragma mark NSURLConnectionDataDelegate
@@ -176,7 +187,7 @@
                         options:NSJSONReadingMutableLeaves
                         error:&error];
   if(!error) {
-    self.promises = [json valueForKey:@"promises"];
+    self.promises = [[json valueForKey:@"promises"] mutableCopy];
     NSLog(@"FINISHED UP %@ %@", self.promises, error);
     [self.tableView reloadData];
   }
