@@ -136,6 +136,8 @@ int duration = 30;
   NSData *videoData = [NSData dataWithContentsOfFile:[outputFileURL path]];
   [self.promise setValue:videoData forKey:@"video"];
   self.nextBtn.hidden = NO;
+  long long fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:[outputFileURL path] error:nil] objectForKey:NSFileSize] longLongValue];
+  NSLog(@"FILE SIZE IS %lld ", fileSize);
 }
 
 - (IBAction)onPressRecord:(id)sender {
