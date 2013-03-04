@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface ConnectViewController : BaseViewController
+@interface ConnectViewController : BaseViewController <NSURLConnectionDataDelegate>
 
 - (IBAction)onPressConnect:(id)sender;
 

@@ -167,7 +167,7 @@
          annotation:(id)annotation {
   NSLog(@"CALLING THIS");
   // attempt to extract a token from the url
-  return [self.session handleOpenURL:url];
+  return [FBSession.activeSession handleOpenURL:url];
 }
 
 @end
