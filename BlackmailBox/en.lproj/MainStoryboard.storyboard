@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6l4-65-Rod">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6l4-65-Rod">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -99,19 +99,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="46" id="4Wi-cs-JrU"/>
+                            <constraint firstItem="EFl-zz-cFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="54" id="2Hx-vt-k7q"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="5XP-UT-z4x"/>
-                            <constraint firstItem="OO2-Bp-Ddh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="227" id="At3-oq-dqr"/>
                             <constraint firstAttribute="trailing" secondItem="EFl-zz-cFi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ECe-1r-7DO"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="HYe-Fp-OjI"/>
                             <constraint firstItem="MeQ-va-i8z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Iji-YT-cgy"/>
                             <constraint firstAttribute="trailing" secondItem="MeQ-va-i8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qt8-Zb-n9F"/>
                             <constraint firstAttribute="trailing" secondItem="UJ3-8B-QgA" secondAttribute="trailing" constant="9" id="SgL-8R-8Oi"/>
+                            <constraint firstItem="OO2-Bp-Ddh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="224" id="U08-lj-osH"/>
                             <constraint firstItem="OO2-Bp-Ddh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="5" id="aFH-E5-fuQ"/>
-                            <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="90" id="hE9-1J-ETT"/>
-                            <constraint firstItem="UJ3-8B-QgA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="232" id="jaG-YY-9MF"/>
+                            <constraint firstItem="UJ3-8B-QgA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="235" id="cBV-7u-16D"/>
                             <constraint firstItem="EFl-zz-cFi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l69-TK-AX2"/>
                             <constraint firstItem="10C-0m-dKB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="vkR-iF-Nlk"/>
+                            <constraint firstItem="MeQ-va-i8z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="92" id="wbd-EU-XQO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ojb-ZA-Jlw"/>
@@ -138,38 +138,44 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="T8w-EE-avX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When you gettin this done by?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zii-u8-U9x">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-ss-qXT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-ss-qXT">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="btn-next.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" image="btn-next-down.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="7M5-HW-Br0" kind="push" id="D9M-ba-pvl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="HOW LONG DO YOU HAVE?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-bq-fjy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3py-9a-LTT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.76682079079999999" green="0.76682079079999999" blue="0.76682079079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="5"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="3bC-bq-fjy" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="54" id="0AT-PV-R87"/>
+                            <constraint firstAttribute="trailing" secondItem="3bC-bq-fjy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="246-ta-t8I"/>
+                            <constraint firstItem="3bC-bq-fjy" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4Bf-5k-fgV"/>
                             <constraint firstItem="peD-CR-1Ek" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FqD-Cw-ApK"/>
-                            <constraint firstItem="peD-CR-1Ek" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="63" id="Jfo-g6-bIV"/>
-                            <constraint firstAttribute="bottom" secondItem="Qgh-ss-qXT" secondAttribute="bottom" constant="185" id="Sua-JQ-3qJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Qgh-ss-qXT" secondAttribute="bottom" constant="147" id="SBd-Li-61N"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" type="default" id="ddW-q7-fcE"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" type="default" id="dq8-7L-585"/>
                             <constraint firstItem="Wzt-mM-YfU" firstAttribute="bottom" secondItem="73A-JX-bw1" secondAttribute="bottom" type="default" id="jpA-cN-Lhc"/>
-                            <constraint firstAttribute="trailing" secondItem="Qgh-ss-qXT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ohl-mh-V4f"/>
-                            <constraint firstItem="zii-u8-U9x" firstAttribute="top" secondItem="73A-JX-bw1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wrD-Xo-HzI"/>
-                            <constraint firstItem="zii-u8-U9x" firstAttribute="leading" secondItem="73A-JX-bw1" secondAttribute="leading" constant="25" id="y9y-Jx-Dsq"/>
+                            <constraint firstAttribute="trailing" secondItem="Qgh-ss-qXT" secondAttribute="trailing" constant="7" id="mH1-uf-N15"/>
+                            <constraint firstItem="peD-CR-1Ek" firstAttribute="top" secondItem="3bC-bq-fjy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tMX-fM-lIy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ya9-1r-lgt"/>
@@ -304,7 +310,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PromiseViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="addFriendsButton" candidateClass="UIButton"/>
-
                 <relationship kind="outlet" name="promiseLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="promiseTextView" candidateClass="UITextView"/>
             </relationships>
