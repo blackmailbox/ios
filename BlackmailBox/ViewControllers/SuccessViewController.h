@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface SuccessViewController : BaseViewController
+@interface SuccessViewController : BaseViewController <NSURLConnectionDataDelegate>
 
 @property (nonatomic, retain) IBOutlet UILabel *successLabel;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

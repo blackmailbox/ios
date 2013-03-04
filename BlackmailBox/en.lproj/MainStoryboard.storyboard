@@ -258,7 +258,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sxN-z0-dUX" kind="push" id="n6G-9W-LoP"/>
+                                    <segue destination="sxN-z0-dUX" kind="push" id="KR8-6V-S62"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="video-chrome.png" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-vd-JJE"/>
@@ -306,6 +306,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sN4-RH-f2g"/>
                     <connections>
+                        <outlet property="nextBtn" destination="ctR-Co-6Of" id="lq6-GD-6cK"/>
                         <outlet property="progressView" destination="VJI-f8-pcp" id="3F2-oW-fID"/>
                         <outlet property="recordBtn" destination="EAy-0p-nwQ" id="wvn-k1-wPz"/>
                         <outlet property="submitBtn" destination="Hlw-bo-cNv" id="u0h-5R-USp"/>
@@ -390,19 +391,23 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="T3P-7w-ubl"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="s1p-tR-v2I" firstAttribute="top" secondItem="d18-tj-vY9" secondAttribute="top" constant="170" id="3iQ-ru-BH7"/>
                             <constraint firstAttribute="trailing" secondItem="s1p-tR-v2I" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Oc2-le-VY1"/>
+                            <constraint firstItem="T3P-7w-ubl" firstAttribute="top" secondItem="d18-tj-vY9" secondAttribute="top" constant="182" id="TsH-eO-esU"/>
                             <constraint firstItem="s1p-tR-v2I" firstAttribute="leading" secondItem="d18-tj-vY9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="U6L-Sq-GER"/>
                             <constraint firstItem="Y01-ut-xHa" firstAttribute="leading" secondItem="d18-tj-vY9" secondAttribute="leading" type="default" id="Zp7-Sg-dv2"/>
                             <constraint firstItem="Y01-ut-xHa" firstAttribute="bottom" secondItem="d18-tj-vY9" secondAttribute="bottom" type="default" id="jYy-4T-Ap2"/>
                             <constraint firstItem="Y01-ut-xHa" firstAttribute="top" secondItem="d18-tj-vY9" secondAttribute="top" type="default" id="px3-S2-7Y1"/>
+                            <constraint firstItem="T3P-7w-ubl" firstAttribute="leading" secondItem="d18-tj-vY9" secondAttribute="leading" constant="143" id="zax-4x-yn4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XGf-vk-pXX"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="T3P-7w-ubl" id="WUU-IS-91O"/>
                         <outlet property="successLabel" destination="s1p-tR-v2I" id="piD-kf-5Bq"/>
                     </connections>
                 </viewController>
@@ -460,6 +465,7 @@
         <class className="SuccessViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SuccessViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="successLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

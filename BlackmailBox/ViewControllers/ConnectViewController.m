@@ -63,6 +63,7 @@
        if (!error) {
          NSLog(@"user %@", user);
          appDelegate.user = user;
+         [self persistUserDataToServer];
          [self performSegueWithIdentifier:@"successSegue" sender:self];
        }
      }];
@@ -72,7 +73,7 @@
 -(void)persistUserDataToServer {
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-  [request setURL:[NSURL URLWithString:@"http://localhost:3000/api/users"]];
+  [request setURL:[NSURL URLWithString:@"http://blackmailboxapp.com/api/users"]];
   [request setHTTPMethod:@"POST"];
   NSMutableData *body = [NSMutableData data];
 

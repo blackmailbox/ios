@@ -34,6 +34,8 @@ int duration = 30;
   [super viewDidLoad];
   //self.navigationItem.title = @"Say Cheese, Muther F'er";
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
+  self.nextBtn.layer.opacity = 1;
+  self.nextBtn.hidden = NO;
   responseData = [[NSMutableData alloc] init];
   [self.submitBtn addTarget:self action:@selector(onSubmit:) forControlEvents:UIControlEventTouchUpInside];
   [self.progressView setProgress:0];
@@ -52,7 +54,7 @@ int duration = 30;
 			[viewLayer setMasksToBounds:YES];
       self.captureManager.recorder.delegate = self;
 			
-			CGRect bounds = [view bounds];
+			CGRect bounds = CGRectMake(view.bounds.origin.x, view.bounds.origin.y, view.bounds.size.width, view.bounds.size.height - 157);
 			[newCaptureVideoPreviewLayer setFrame:bounds];
 			
 //			if ([self.captureManager.session]) {
@@ -61,7 +63,7 @@ int duration = 30;
 			
 			[newCaptureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
 			
-			[viewLayer insertSublayer:newCaptureVideoPreviewLayer below:[[viewLayer sublayers] objectAtIndex:0]];
+			[viewLayer insertSublayer:newCaptureVideoPreviewLayer below:[[viewLayer sublayers] objectAtIndex:1]];
 			
 			[self setCaptureVideoPreviewLayer:newCaptureVideoPreviewLayer];
 			
@@ -74,7 +76,8 @@ int duration = 30;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-  self.nextBtn.hidden = NO;
+  [super viewWillAppear:animated];
+  self.nextBtn.layer.opacity = 1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,7 +98,7 @@ int duration = 30;
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
   [request setURL:
     [NSURL URLWithString:
-     [NSString stringWithFormat:@"http://localhost:3000/api/users/%@/promises", [appDelegate.user valueForKey:@"id"]]
+     [NSString stringWithFormat:@"http://blackmailboxapp.com/api/users/%@/promises", [appDelegate.user valueForKey:@"id"]]
   ]];
   NSLog(@"SO YEAH UH %@", request.URL);
   [request setHTTPMethod:@"POST"];
@@ -130,12 +133,12 @@ int duration = 30;
   avPlayer = [AVPlayer playerWithURL:outputFileURL];
   avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:avPlayer];
   avPlayerLayer.frame = self.view.layer.bounds;
-  [self.view.layer insertSublayer:avPlayerLayer atIndex:10];
-  [avPlayer play];
+  //[self.view.layer insertSublayer:avPlayerLayer atIndex:10];
+  //[avPlayer play];
   [avPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
   NSData *videoData = [NSData dataWithContentsOfFile:[outputFileURL path]];
   [self.promise setValue:videoData forKey:@"video"];
-  self.nextBtn.hidden = NO;
+  [self.nextBtn.layer setOpacity:1.0];
   long long fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:[outputFileURL path] error:nil] objectForKey:NSFileSize] longLongValue];
   NSLog(@"FILE SIZE IS %lld ", fileSize);
 }
@@ -144,11 +147,11 @@ int duration = 30;
   if(self.captureManager.recorder.isRecording) {
     [self.captureManager stopRecording];
     [timer invalidate];
-    [self.recordBtn setTitle:@"Record" forState:UIControlStateNormal];
+    //[self.recordBtn setTitle:@"Record" forState:UIControlStateNormal];
   }
   else {
     [self.captureManager startRecording];
-    [self.recordBtn setTitle:@"Stop" forState:UIControlStateNormal];
+    //[self.recordBtn setTitle:@"Stop" forState:UIControlStateNormal];
   }
   NSLog(@"RECORD PRESSED");
 }

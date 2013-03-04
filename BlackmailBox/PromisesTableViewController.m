@@ -25,14 +25,18 @@
   self.promises = [NSMutableArray array];
   self.tableView.separatorColor = [UIColor blackColor];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
-  [self loadData];
 	// Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  responseData = [[NSMutableData alloc] init];
+  [self loadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
 }
 
 -(void)loadData {
@@ -44,7 +48,7 @@
     NSLog(@"USER IS %@", appDelegate.user);
     [request setURL:
      [NSURL URLWithString:
-      [NSString stringWithFormat:@"http://localhost:3000/api/users/%@/promises", [appDelegate.user valueForKey:@"id"]]
+      [NSString stringWithFormat:@"http://blackmailboxapp.com/api/users/%@/promises", [appDelegate.user valueForKey:@"id"]]
       ]];
     NSLog(@"SO YEAH UH %@", request.URL);
     [request setHTTPMethod:@"GET"];
@@ -134,7 +138,9 @@
   selectionColor.backgroundColor = [UIColor colorWithRed:(125/255.0) green:(125/255.0) blue:(125/255.0) alpha:1];
   cell.selectedBackgroundView = selectionColor;
   cell.detailTextLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-  cell.textLabel.font = [UIFont fontWithName:@"FjallaOne-Regular" size:20];
+  cell.textLabel.font = [UIFont fontWithName:@"FjallaOne-Regular" size:18];
+  cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+  cell.textLabel.numberOfLines = 3; // 0 means no max.;
   cell.textLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
   cell.textLabel.shadowColor = [UIColor blackColor];
   cell.textLabel.shadowOffset = CGSizeMake(0, 5.0);
@@ -146,7 +152,8 @@
   return 80;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSLog(@"DID SELECT");
   NSDictionary *promise = [self.promises objectAtIndex:indexPath.row];
   [self performSegueWithIdentifier:@"showPromise" sender:self];
 }
@@ -168,9 +175,13 @@
                         JSONObjectWithData:responseData
                         options:NSJSONReadingMutableLeaves
                         error:&error];
-  self.promises = [json valueForKey:@"promises"];
-  NSLog(@"FINISHED UP");
-  [self.tableView reloadData];
+  if(!error) {
+    self.promises = [json valueForKey:@"promises"];
+    NSLog(@"FINISHED UP %@ %@", self.promises, error);
+    [self.tableView reloadData];
+  }
+  else
+    [self loadData];
 }
 
 @end
