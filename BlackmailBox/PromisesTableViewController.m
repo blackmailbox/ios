@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  NSLog(@"THE INTIAL PROMISE IS %@", self.promise);
   [self hideStartScreen];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   [self.startLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
@@ -184,8 +185,8 @@
     ShowPromiseViewController *viewController = [segue destinationViewController];
     NSDictionary *promiseAttributes = [self.promises objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     viewController.promiseAttributes = promiseAttributes;
-    [super prepareForSegue:segue sender:sender];
   }
+  [super prepareForSegue:segue sender:sender];
 }
 
 #pragma mark NSURLConnectionDataDelegate

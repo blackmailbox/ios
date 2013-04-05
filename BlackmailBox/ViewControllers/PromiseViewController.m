@@ -23,6 +23,7 @@ NSString *placeholderText = @"";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  NSLog(@"INITIAL PROMISE IS %@", self.promise);
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mailbox.png"]];
   [self.promiseLabel setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:22]];
   [self.promiseTextView setFont:[UIFont fontWithName:@"FjallaOne-Regular" size:16]];

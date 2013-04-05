@@ -40,12 +40,12 @@
 }
 
 -(void)uploadItAll {
+  NSLog(@"PROMISE IS HERE %@", self.promise);
   NSMutableDictionary *promiseParams = [NSMutableDictionary dictionary];
   if([self.promise valueForKey:@"text"])
     [promiseParams setValue:[self.promise valueForKey:@"text"] forKey:@"description"];
   if([self.promise valueForKey:@"endDate"])
     [promiseParams setValue:[NSNumber numberWithFloat:[[self.promise valueForKey:@"endDate"] timeIntervalSince1970]] forKey:@"expiresAt"];
-  
   
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSLog(@"USEr IS %@", appDelegate.user);
@@ -61,7 +61,7 @@
   [request setHTTPBody:body];
   
   NSError *error = nil;
-  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:promiseParams options:NSJSONWritingPrettyPrinted error:&error];
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:@{@"promise": promiseParams} options:NSJSONWritingPrettyPrinted error:&error];
   NSLog(@"THE JSON DATA %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
   [body appendData:jsonData];
   [request addValue:[NSString stringWithFormat:@"%d", body.length] forHTTPHeaderField:@"Content-Length"];

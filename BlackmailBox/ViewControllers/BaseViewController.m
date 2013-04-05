@@ -24,6 +24,7 @@
   
   if([self respondsToSelector:@selector(promise)] &&
      [segue.destinationViewController respondsToSelector:@selector(setPromise:)]) {
+    NSLog(@"PROMISE IN BASE CONTROLLER %@", self.promise);
     [segue.destinationViewController setPromise:self.promise];
   }
 }
